@@ -15,7 +15,8 @@ Currently Aurora doesn't have few settings integrated. So you've to do it manual
 **Supported Modules**:
 - Member List
 - Store Module
-- Resources Module
+- Resources Module <br>
+
 **How to add Module support**:
 - Instead of uploading module files to /DefaultRevamp/ folder, upload it to /Aurora folder
 > We'll appreciate if you help us adding module support by cloning this repo
