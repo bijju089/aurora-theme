@@ -1,6 +1,6 @@
 <div class="ui fluid card" id="widget-latest-posts">
     <div class="content">
-        <h4 class="ui header">{$LATEST_PROFILE_POSTS}</h4>
+        <h4 class="ui header"><i class="fa-solid fa-files"></i> {$LATEST_PROFILE_POSTS}</h4>
         <div class="description">
             {if isset($PROFILE_POSTS_ARRAY)}
             {foreach from=$PROFILE_POSTS_ARRAY name=profile_posts item=post}

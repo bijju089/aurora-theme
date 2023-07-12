@@ -1,6 +1,6 @@
 <div class="ui fluid card" id="widget-new-resources">
     <div class="content">
-        <h4 class="ui header">{$TOP_RESOURCES_TITLE}</h4>
+        <h4 class="ui header"><i class="fa-solid fa-memo"></i> {$TOP_RESOURCES_TITLE}</h4>
         <div class="description">
             {if count($TOP_RESOURCES)}
                 {foreach from=$TOP_RESOURCES item=resource}

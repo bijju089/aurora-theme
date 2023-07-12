@@ -21,28 +21,44 @@
             <div class="ui six wide column">
                 <div class="res right floated">
                     {if isset($CAN_UPDATE)}
-                        <a href="{$UPDATE_LINK}" class="ui blue button">{$UPDATE}</a>
+                        <a href="{$UPDATE_LINK}" class="ui button">{$UPDATE}</a>
                     {/if}
-                    <a href="{$BACK_LINK}" class="ui button">{$RESOURCE_INDEX}</a>
+                  {if isset($LOG_IN_TO_DOWNLOAD)}
+                    <button disabled class="ui blue disabled button">{$LOG_IN_TO_DOWNLOAD}</button>
+                {/if}
+                {if isset($DOWNLOAD_URL)}
+                    <a href="{$DOWNLOAD_URL}" class="ui blue button" target="_blank">{$DOWNLOAD}</a>
+                {elseif isset($PURCHASE_FOR_PRICE)}
+                    <a {if isset($PURCHASE_LINK)}href="{$PURCHASE_LINK}" 
+                    {else}disabled
+                            {/if}class="ui blue{if !isset($PURCHASE_LINK)} disabled{/if} button">{$PURCHASE_FOR_PRICE}</a>
+                    {elseif isset($PAYMENT_PENDING)}
+                        <button type="button" disabled class="ui blue button">{$PAYMENT_PENDING}</button>
+                    {/if}
+
                 </div>
             </div>
         </div>
-        <div class="ui divider"></div>
-
+<div class="ui breadcrumb">
+  <a class="section">Resources</a>
+  <div class="divider"> > </div>
+  <div class="active section">{$CATEGORY_VALUE}</div>
+</div>
         <div class="ui row">
             <div class="twelve wide column">
-                <div class="ui tabular menu">
+                <div class="ui pointing menu">
                     <a class="item active" href="{$OVERVIEW_LINK}">{$OVERVIEW_TITLE}</a>
                     <a class="item" href="{$OTHER_RELEASES_LINK}">{$RELEASES_TITLE}</a>
                     <a class="item" href="{$VERSIONS_LINK}">{$VERSIONS_TITLE}</a>
                     <a class="item" href="{$REVIEWS_LINK}">{$REVIEWS_TITLE}</a>
                 </div>
                 <div class="forum_post">
+                {if $HAS_CONTRIBUTORS eq 1}{$CONTRIBUTORS}{/if}
+                <h4 class="ui horizontal divider header">
+                <i class="tag icon"></i>
+                Description</h4>
                     {$DESCRIPTION}
                 </div>
-
-                <br />{if $HAS_CONTRIBUTORS eq 1}{$CONTRIBUTORS}{/if}
-
                 <div class="ui divider"></div>
 
                 {if isset($LOG_IN_TO_DOWNLOAD)}
@@ -87,7 +103,7 @@
                             </div>
                         {/if}
                         {if isset($MODERATION) && count($MODERATION)}
-                            <div class="ui pointing dropdown small primary button upward" tabindex="0">
+                            <div class="ui pointing dropdown small button upward" tabindex="0">
                                 <a class="text">{$MODERATION_TEXT}</a>
                                 <i class="dropdown icon"></i>
                                 <div class="menu" tabindex="-1">
@@ -106,7 +122,6 @@
                 <div class="four wide column">
                     <div class="ui aligned segment">
                         <h4 class="ui header">{$RESOURCE}</h4>
-                        <div class="ui divider"></div>
 
                         <div class="description">
                             <div class="ui list">
@@ -150,7 +165,6 @@
 
                     <div class="ui aligned segment">
                         <h4 class="ui header">{$RELEASE_VERSION}</h4>
-                        <div class="ui divider"></div>
 
                         <div class="description">
                             <div class="ui list">
@@ -183,15 +197,13 @@
 
                     <div class="ui aligned segment">
                         <h4 class="ui header">{$AUTHOR}</h4>
-                        <div class="ui divider"></div>
 
                         <center>
                             <a href="{$AUTHOR_PROFILE}"><img src="{$AUTHOR_AVATAR}" class="ui rounded centered image"
                                     alt="{$AUTHOR_NICKNAME}" style="max-height:80px; max-width:80px;" /></a><br />
                             <a href="{$AUTHOR_PROFILE}" style="{$AUTHOR_STYLE}">{$AUTHOR_NICKNAME}</a>
-                            <div class="ui divider"></div>
-
-                            <a href="{$AUTHOR_RESOURCES}">&raquo; {$VIEW_OTHER_RESOURCES}</a>
+                            
+                            <div><small><a href="{$AUTHOR_RESOURCES}">&raquo; {$VIEW_OTHER_RESOURCES}</a></small></div>
                         </center>
                     </div>
                 </div>

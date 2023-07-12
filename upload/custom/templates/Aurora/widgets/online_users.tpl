@@ -1,6 +1,6 @@
 <div class="ui fluid card" id="widget-online-users">
     <div class="content">
-        <h4 class="ui header">{$ONLINE_USERS}</h4>
+        <h4 class="ui header"><i class="fa-solid fa-users"></i> {$ONLINE_USERS}</h4>
         <div class="description">
             {if isset($ONLINE_USERS_LIST)}
                 {foreach from=$ONLINE_USERS_LIST name=online_users_arr item=user}

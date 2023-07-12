@@ -8,7 +8,6 @@
  *    Made by cxDEV | BijjuXD
  *    https://github.com/bijju089/aurora-theme/
  *    Aurora Template
- * Still in Beta. Help the development of Aurora
  */
 
 class Aurora_Template extends TemplateBase {
@@ -27,7 +26,7 @@ class Aurora_Template extends TemplateBase {
     public function __construct($cache, $smarty, $language, $user, $pages) {
         $template = [
             'name' => 'Aurora',
-            'version' => '0.1',
+            'version' => '2.1',
             'nl_version' => '2.1.1',
             'author' => '<a href="https://cxstudios.xyz/" target="_blank">BijjuXD</a>',
         ];

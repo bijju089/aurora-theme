@@ -14,18 +14,18 @@
             
             {if count($SHOPPING_CART_PRODUCTS)}
               <a href="{$CHECKOUT_LINK}" class="ui blue button">
-                {$X_ITEMS_FOR_Y}
+                <i class="fa-solid fa-cart-shopping"></i> {$X_ITEMS_FOR_Y}
               </a>
             {else}
               <a class="ui blue disabled button">
-                {$X_ITEMS_FOR_Y}
+                <i class="fa-solid fa-cart-shopping"></i> {$X_ITEMS_FOR_Y}
               </a>
             {/if}
             
           </div>
         </span>
 
-        <div class="ui top attached menu">
+        <div class="ui top attached pointing menu">
            {foreach from=$CATEGORIES item=category}
             {if isset($category.subcategories) && count($category.subcategories)}
               <div class="ui pointing dropdown link item">

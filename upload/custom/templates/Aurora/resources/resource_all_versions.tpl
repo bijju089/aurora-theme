@@ -36,10 +36,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="ui divider"></div>
-                <div class="ui row">
-                    <div class="twelve wide column">
-                        <div class="ui tabular menu">
+<div class="ui breadcrumb">
+  <a class="section">Resources</a>
+  <div class="divider"> > </div>
+  <div class="active section">{$CATEGORY_VALUE}</div>
+</div>
+        <div class="ui row">
+            <div class="twelve wide column">
+                <div class="ui pointing menu">
                             <a class="item" href="{$OVERVIEW_LINK}">{$OVERVIEW_TITLE}</a>
                             <a class="item" href="{$OTHER_RELEASES_LINK}">{$RELEASES_TITLE}</a>
                             <a class="item active" href="{$VERSIONS_LINK}">{$VERSIONS_TITLE}</a>
@@ -86,93 +90,92 @@
                         </table>
                         {$PAGINATION}
                     </div>
-                    <div class="four wide column">
-                        <div class="ui aligned segment">
-                            <h4 class="ui header">{$RESOURCE}</h4>
-                            <div class="ui divider"></div>
-                            <div class="description">
-                                <div class="ui list">
-                                    <div class="item">
-                                        <span class="text">{$VIEWS}</span>
-                                        <div class="description right floated"><b>{$VIEWS_VALUE}</b></div>
-                                    </div>
-                                    <div class="item">
-                                        <span class="text">{$TOTAL_DOWNLOADS}</span>
-                                        <div class="description right floated"><b>{$TOTAL_DOWNLOADS_VALUE}</b></div>
-                                    </div>
-                                    <div class="item">
-                                        <span class="text">{$FIRST_RELEASE}</span>
-                                        <div class="description right floated"><b>{$FIRST_RELEASE_DATE}</b></div>
-                                    </div>
-                                    <div class="item">
-                                        <span class="text">{$LAST_RELEASE}</span>
-                                        <div class="description right floated"><b>{$LAST_RELEASE_DATE}</b></div>
-                                    </div>
-                                    <div class="item">
-                                        <span class="text">{$CATEGORY}</span>
-                                        <div class="description right floated"><b>{$CATEGORY_VALUE}</b></div>
-                                    </div>
-                                    <div class="item">
-                                        <span class="text">{$RATING}</span>
-                                        <div class="description right floated">
-                                            <div class="star-rating view">
-                                                <span class="far fa-star" data-rating="1" style="color:gold;"></span>
-                                                <span class="far fa-star" data-rating="2" style="color:gold"></span>
-                                                <span class="far fa-star" data-rating="3" style="color:gold;"></span>
-                                                <span class="far fa-star" data-rating="4" style="color:gold;"></span>
-                                                <span class="far fa-star" data-rating="5" style="color:gold;"></span>
-                                                <input type="hidden" name="rating" class="rating-value"
-                                                    value="{$RATING_VALUE}">
-                                            </div>
+                 <div class="four wide column">
+                    <div class="ui aligned segment">
+                        <h4 class="ui header">{$RESOURCE}</h4>
+
+                        <div class="description">
+                            <div class="ui list">
+                                <div class="item">
+                                    <span class="text">{$VIEWS}</span>
+                                    <div class="description right floated"><b>{$VIEWS_VALUE}</b></div>
+                                </div>
+                                <div class="item">
+                                    <span class="text">{$TOTAL_DOWNLOADS}</span>
+                                    <div class="description right floated"><b>{$TOTAL_DOWNLOADS_VALUE}</b></div>
+                                </div>
+                                <div class="item">
+                                    <span class="text">{$FIRST_RELEASE}</span>
+                                    <div class="description right floated"><b>{$FIRST_RELEASE_DATE}</b></div>
+                                </div>
+                                <div class="item">
+                                    <span class="text">{$LAST_RELEASE}</span>
+                                    <div class="description right floated"><b>{$LAST_RELEASE_DATE}</b></div>
+                                </div>
+                                <div class="item">
+                                    <span class="text">{$CATEGORY}</span>
+                                    <div class="description right floated"><b>{$CATEGORY_VALUE}</b></div>
+                                </div>
+                                <div class="item">
+                                    <span class="text">{$RATING}</span>
+                                    <div class="description right floated">
+                                        <div class="star-rating view">
+                                            <span class="far fa-star" data-rating="1" style="color:gold;"></span>
+                                            <span class="far fa-star" data-rating="2" style="color:gold"></span>
+                                            <span class="far fa-star" data-rating="3" style="color:gold;"></span>
+                                            <span class="far fa-star" data-rating="4" style="color:gold;"></span>
+                                            <span class="far fa-star" data-rating="5" style="color:gold;"></span>
+                                            <input type="hidden" name="rating" class="rating-value" value="{$RATING_VALUE}">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="ui aligned segment">
-                            <h4 class="ui header">{$RELEASE_VERSION}</h4>
-                            <div class="ui divider"></div>
+                    </div>
 
-                            <div class="description">
-                                <div class="ui list">
-                                    <div class="item">
-                                        <span class="text">{$DOWNLOADS}</span>
-                                        <div class="description right floated"><b>{$RELEASE_DOWNLOADS}</b></div>
-                                    </div>
-                                    <div class="item">
-                                        <span class="text">{$RELEASE}</span>
-                                        <div class="description right floated"><b>{$RELEASE_DATE_FULL}</b></div>
-                                    </div>
-                                    <div class="item">
-                                        <span class="text">{$RATING}</span>
-                                        <div class="description right floated">
-                                            <div class="star-rating view">
-                                                <span class="far fa-star" data-rating="1" style="color:gold;"></span>
-                                                <span class="far fa-star" data-rating="2" style="color:gold"></span>
-                                                <span class="far fa-star" data-rating="3" style="color:gold;"></span>
-                                                <span class="far fa-star" data-rating="4" style="color:gold;"></span>
-                                                <span class="far fa-star" data-rating="5" style="color:gold;"></span>
-                                                <input type="hidden" name="rating" class="rating-value"
-                                                    value="{$RELEASE_RATING}">
-                                            </div>
+                    <div class="ui aligned segment">
+                        <h4 class="ui header">{$RELEASE_VERSION}</h4>
+
+                        <div class="description">
+                            <div class="ui list">
+                                <div class="item">
+                                    <span class="text">{$DOWNLOADS}</span>
+                                    <div class="description right floated"><b>{$RELEASE_DOWNLOADS}</b></div>
+                                </div>
+                                <div class="item">
+                                    <span class="text">{$RELEASE}</span>
+                                    <div class="description right floated"><b>{$RELEASE_DATE_FULL}</b></div>
+                                </div>
+                                <div class="item">
+                                    <span class="text">{$RATING}</span>
+                                    <div class="description right floated">
+                                        <div class="star-rating view">
+                                            <span class="far fa-star" data-rating="1" style="color:gold;"></span>
+                                            <span class="far fa-star" data-rating="2" style="color:gold"></span>
+                                            <span class="far fa-star" data-rating="3" style="color:gold;"></span>
+                                            <span class="far fa-star" data-rating="4" style="color:gold;"></span>
+                                            <span class="far fa-star" data-rating="5" style="color:gold;"></span>
+                                            <input type="hidden" name="rating" class="rating-value"
+                                                value="{$RELEASE_RATING}">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="ui aligned segment">
-                            <h4 class="ui header">{$AUTHOR}</h4>
-                            <div class="ui divider"></div>
 
-                            <center>
-                                <a href="{$AUTHOR_PROFILE}"><img src="{$AUTHOR_AVATAR}" class="ui rounded centered image"
-                                        alt="{$AUTHOR_NICKNAME}" style="max-height:80px; max-width:80px;" /></a><br />
-                                <a href="{$AUTHOR_PROFILE}" style="{$AUTHOR_STYLE}">{$AUTHOR_NICKNAME}</a>
-                                <div class="ui divider"></div>
+                    </div>
 
-                                <a href="{$AUTHOR_RESOURCES}">&raquo; {$VIEW_OTHER_RESOURCES}</a>
-                            </center>
+                    <div class="ui aligned segment">
+                        <h4 class="ui header">{$AUTHOR}</h4>
+
+                        <center>
+                            <a href="{$AUTHOR_PROFILE}"><img src="{$AUTHOR_AVATAR}" class="ui rounded centered image"
+                                    alt="{$AUTHOR_NICKNAME}" style="max-height:80px; max-width:80px;" /></a><br />
+                            <a href="{$AUTHOR_PROFILE}" style="{$AUTHOR_STYLE}">{$AUTHOR_NICKNAME}</a>
+                            
+                            <div><small><a href="{$AUTHOR_RESOURCES}">&raquo; {$VIEW_OTHER_RESOURCES}</a></small></div>
+                        </center>
                         </div>
                     </div>
                 </div>

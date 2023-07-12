@@ -1,8 +1,9 @@
 {include file='header.tpl'}
 {include file='navbar.tpl'}
 
-<div class="ui stackable grid">
-  <div class="ui centered row">
+<div class="ui padded segment">
+    <div class="ui stackable grid">
+            <div class="ui eleven wide column">
 
     {if count($WIDGETS_LEFT)}
       <div class="ui six wide tablet four wide computer column">
@@ -82,6 +83,12 @@
             </tr>
           </tbody>
         </table>
+</div>
+</div>
+</div>
+
+                <div class="five wide column">
+                    <div class="ui segment">
 
         <h3>{$REDEEM_COUPON}</h3>
         <div class="ui divider"></div>
@@ -120,7 +127,7 @@
                 <div class="column">
                     <div class="field">
                         <input type="hidden" name="token" value="{$TOKEN}">
-                        <span class="right floated"><input type="submit" class="ui green button right floated" value="{$PURCHASE} &raquo;"></span>
+                        <span class="right floated"><input type="submit" class="ui green button center floated" value="{$PURCHASE} &raquo;"></span>
                     </div>
                 </div>
             </div>
@@ -129,6 +136,9 @@
 
       </div>
     </div>
+      </div>
+    </div>
+
     
     {if count($WIDGETS_RIGHT)}
       <div class="ui six wide tablet four wide computer column">

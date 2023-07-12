@@ -120,7 +120,6 @@ $current_template->assets()->include([
 
 $current_template->addJSScript(Input::createTinyEditor($language, 'inputHomeCustomContent', Util::getSetting('home_custom_content')));
 
-
 $smarty->assign([
     'SUBMIT' => $language->get('general', 'submit'),
     'ENABLED' => $language->get('admin', 'enabled'),

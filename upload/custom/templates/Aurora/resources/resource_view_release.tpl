@@ -28,11 +28,14 @@
             </div>
 
 
-            <div class="ui divider"></div>
-
-            <div class="ui row">
-                <div class="twelve wide column">
-                    <div class="ui tabular menu">
+<div class="ui breadcrumb">
+  <a class="section">Resources</a>
+  <div class="divider"> > </div>
+  <div class="active section">{$CATEGORY_VALUE}</div>
+</div>
+        <div class="ui row">
+            <div class="twelve wide column">
+                <div class="ui pointing menu">
                         <a class="item" href="{$OVERVIEW_LINK}">{$OVERVIEW_TITLE}</a>
                         <a class="item" href="{$OTHER_RELEASES_LINK}">{$RELEASES_TITLE}</a>
                         <a class="item" href="{$VERSIONS_LINK}">{$VERSIONS_TITLE}</a>
@@ -61,7 +64,6 @@
                 <div class="four wide column">
                     <div class="ui aligned segment">
                         <h4 class="ui header">{$RESOURCE}</h4>
-                        <div class="ui divider"></div>
 
                         <div class="description">
                             <div class="ui list">
@@ -94,8 +96,7 @@
                                             <span class="far fa-star" data-rating="3" style="color:gold;"></span>
                                             <span class="far fa-star" data-rating="4" style="color:gold;"></span>
                                             <span class="far fa-star" data-rating="5" style="color:gold;"></span>
-                                            <input type="hidden" name="rating" class="rating-value"
-                                                value="{$RATING_VALUE}">
+                                            <input type="hidden" name="rating" class="rating-value" value="{$RATING_VALUE}">
                                         </div>
                                     </div>
                                 </div>
@@ -106,7 +107,6 @@
 
                     <div class="ui aligned segment">
                         <h4 class="ui header">{$RELEASE_VERSION}</h4>
-                        <div class="ui divider"></div>
 
                         <div class="description">
                             <div class="ui list">
@@ -139,15 +139,13 @@
 
                     <div class="ui aligned segment">
                         <h4 class="ui header">{$AUTHOR}</h4>
-                        <div class="ui divider"></div>
 
                         <center>
                             <a href="{$AUTHOR_PROFILE}"><img src="{$AUTHOR_AVATAR}" class="ui rounded centered image"
                                     alt="{$AUTHOR_NICKNAME}" style="max-height:80px; max-width:80px;" /></a><br />
                             <a href="{$AUTHOR_PROFILE}" style="{$AUTHOR_STYLE}">{$AUTHOR_NICKNAME}</a>
-                            <div class="ui divider"></div>
-
-                            <a href="{$AUTHOR_RESOURCES}">&raquo; {$VIEW_OTHER_RESOURCES}</a>
+                            
+                            <div><small><a href="{$AUTHOR_RESOURCES}">&raquo; {$VIEW_OTHER_RESOURCES}</a></small></div>
                         </center>
                     </div>
                 </div>

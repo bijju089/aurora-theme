@@ -1,15 +1,27 @@
 </div>
 </div>
 
-<div class="ui inverted vertical footer segment" id="footer">
-    <div class="ui container">
-        <div class="ui stackable inverted divided equal height stackable grid">
-            <div class="{if $SOCIAL_MEDIA_ICONS|count > 0}six{else}eight{/if} wide column">
-                <h4 class="ui inverted header">{$SITE_NAME}</h4>
-                  <div class="ui inverted link list">
+ <div class="ui inverted vertical footer segment" id="footer">
+  <div class="ui container">
+   <div class="ui stackable inverted divided grid">
+    <div class="five wide column">
+     <h4 class="ui inverted header">About Us</h4>
+     {* ABOUT US CONTENT *}
+     <p>Our community has been around for many years and pride ourselves on offering unbiased, 
+        critical discussion among people of all different backgrounds. 
+        We are working every day to make sure our community is one of the best.
+     </p>
+   </div>
+    <div class="four wide column">
+     <h4 class="ui inverted header">{$SITE_NAME}</h4>
+                   <div class="ui inverted link list">
                     <span class="item">&copy; <strong>{$SITE_NAME}</strong> {'Y'|date}</span>
-                    <span class="item">Powered By <a href="https://namelessmc.com">NamelessMC</a></span>
-                    <span class="item">Theming with <a href="https://cxstudios.xyz">cxSTUDIOS</a></span>
+                    {if $userLoggedIn}
+                    <a class="item" href="/register">Register</a>
+                    <a class="item" href="/login">Login</a>
+                    {else}
+                    <a class="item" href="/user">Account Settings</a>
+                    {/if}
                     {if $PAGE_LOAD_TIME}
                     <span class="item" id="page_load"></span>
                     {/if}
@@ -32,9 +44,8 @@
                     {if isset($AUTO_LANGUAGE)}
                         <a class="item" href="javascript:" onclick="toggleAutoLanguage()" id="auto-language"></a>
                     {/if}
-                </div>
-            </div>
-            <div class="{if $SOCIAL_MEDIA_ICONS|count > 0}five{else}eight{/if} wide column">
+                </div>    </div>
+            <div class="three wide column">
                 <h4 class="ui inverted header">{$FOOTER_LINKS_TITLE}</h4>
                 <div class="ui inverted link list">
                     {foreach from=$FOOTER_NAVIGATION key=name item=item}
@@ -56,9 +67,9 @@
                     <a class="item" href="{$TERMS_LINK}">{$TERMS_TEXT}</a>
                     <a class="item" href="{$PRIVACY_LINK}">{$PRIVACY_TEXT}</a>
                 </div>
-            </div>
-            {if $SOCIAL_MEDIA_ICONS|count > 0}
-            <div class="five wide column">
+            </div>      
+      {if $SOCIAL_MEDIA_ICONS|count > 0}
+            <div class="three wide column">
                 <h4 class="ui inverted header">{$FOOTER_SOCIAL_TITLE}</h4>
                 <div class="ui inverted link list">
                     {foreach from=$SOCIAL_MEDIA_ICONS item=icon}
@@ -67,11 +78,24 @@
                 </div>
             </div>
             {/if}
-        </div>
-
-    </div>
-</div>
-
+   </div>
+   <div class="ui inverted section divider"></div>
+     <div class="center aligned">
+        <span class="item">&copy; <strong>{$SITE_NAME}</strong> {'Y'|date}</span> |
+        <span class="item">Powered By <a href="https://namelessmc.com">NamelessMC</a></span> <br>
+        <span class="item">Theming with <i class="fa-solid fa-heart fa-beat" style="color: #d90d0d;"></i> by <a href="https://cxstudios.xyz">cxSTUDIOS</a></span>
+     </div>
+    <br>
+   <div class="center aligned">
+     <div class="ui horizontal inverted small divided link list"> 
+        <a class="item" href="/cache/sitemaps/sitemap-index.xml">Site Map</a>
+        <a class="item" href="#">Contact Us</a>
+        <a class="item" href="{$TERMS_LINK}">{$TERMS_TEXT}</a>
+        <a class="item" href="{$PRIVACY_LINK}">{$PRIVACY_TEXT}</a>
+      </div>
+     </div>
+   </div>
+   </div>
 {if isset($GLOBAL_WARNING_TITLE)}
 <div class="ui medium modal" id="modal-acknowledge">
     <div class="header">
