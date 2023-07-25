@@ -27,8 +27,10 @@ Currently Aurora doesn't have few settings integrated. So you've to do it manual
   - We always recommend you to use latest version of namelessmc.
 - Latest version of browser (Internet Explorer not supported)
 ### Supported Modules
-- ?
-- Modules that are not listed here should support Aurora template as there are no css changes for this template.
+- Resources
+- Store
+- Members
+- Modules that are not listed here should support Aurora template
 
 ## Configuring Theme
 
