@@ -22,9 +22,9 @@
 
 <div class="pusher">
     <div id="wrapper">
-        <div class="ui secondary {$DEFAULT_REVAMP_NAVBAR_EXTRA_CLASSES} pointing menu" style="height: 55px;" id="navbar">
+        <div class="ui secondary {if $NAVBARTYPE eq '0'} pointing {/if} menu" style="height: 55px;" id="navbar">
             <div class="ui container">
-              {if isset($LOGO_IMAGE)} <img class="ui small image" style="max-width:80px;"src="{$LOGO_IMAGE}"> {else} <h2>{$SITE_NAME} </h2> {/if}
+              {if $NAVBARSTYLE eq '0'}{if isset($LOGO_IMAGE)}<img class="ui small image" style="max-width:80px;"src="{$LOGO_IMAGE}" id="pcnavbar"> {else} <h2>{$SITE_NAME} </h2> {/if}{/if}
                 {foreach from=$NAV_LINKS key=name item=item}
                     {if isset($item.items)}
                         <div class="ui dropdown item">
@@ -101,23 +101,79 @@
                 </div>
             </div>
         </div>
+   {if $NAVBARSTYLE eq '0'}
     <div class="ui secondary segment" style="margin-top: 0; border-radius: 0;">
        <div class="ui container">
          <div class="row">
            <div class="ui icon buttons">
-              <a href="#" class="ui button"><i class="fa-brands fa-youtube"></i></a>
-              <a href="#" class="ui button"><i class="fa-brands fa-discord"></i></a>
-              <a href="#" class="ui button"><i class="fa-brands fa-twitter"></i></a>
-              <a href="#" class="ui button"><i class="fa-brands fa-facebook"></i></a>
+              <a href="{$SOCIAL_LINK_1}" class="ui button"><i class="fa-brands fa-youtube"></i></a>
+              <a href="{$SOCIAL_LINK_2}" class="ui button"><i class="fa-brands fa-discord"></i></a>
+              <a href="{$SOCIAL_LINK_3}" class="ui button"><i class="fa-brands fa-twitter"></i></a>
+              <a href="{$SOCIAL_LINK_4}" class="ui button"><i class="fa-brands fa-facebook"></i></a>
           </div>
-          {if isset($MINECRAFT) && isset($SERVER_QUERY)}
+          {if $DISCORDVIEW eq '1'}
+           <button class="ui right floated large button" onclick="dslinkopen()" 
+            data-tooltip="{$CLICK_TO_JOIN}" data-variation="mini" data-inverted="" id="pcnavbar">
+           <i class="discord icon"></i>{$DISCORD_SERVER['members']} Users Online</button>
+          {/if}
+          {if $MINECRAFTVIEW eq '1'}
            <button class="ui right floated large button" onclick="copy('#ip')" 
-            data-tooltip="{$CLICK_TO_COPY_TOOLTIP}" data-variation="mini" data-inverted="">
-           <i class="fa-solid fa-circle-play"></i> {$CONNECT_WITH}</button>
+            data-tooltip="{$CLICK_TO_COPY_TOOLTIP}" data-variation="mini" data-inverted="" id="pcnavbar">
+           <i class="circle play icon"></i><b id="minecraftplayers">Loading</b></button>
           {/if}
        </div>
      </div>
    </div>
+   {else}
+  <div class="ui stackable three column grid"
+    style="background-image:url('{$BANNER_IMAGE}'); padding: 45px; margin-top:0px!important; border-bottom-left-radius: 85% 20%; border-bottom-right-radius: 85% 20%;">
+    <div class="column" style="text-align: center; margin-top: 2.8rem; display: none;" id="mobnavbar">
+        <div class="ui steps">
+            <div class="step" style="background: transparent; color: white; flex-direction: row;">
+                {if $DISCORDVIEW eq '1'}
+                    <i class="discord icon" id="dslink"></i>
+                {/if}
+                {if $MINECRAFTVIEW eq '1'}
+                    <i class="circle play icon" onclick="copy('#ip')"></i>
+                {/if}
+            </div>
+        </div>
+    </div>
+    {if $DISCORDVIEW eq '1'}
+        <div class="column" style="text-align: center; margin-top: 2.8rem;" id="pcnavbar">
+            <div class="ui steps">
+                <div class="step" style="background: transparent;color: white;border: none;">
+                    <i class="discord icon"></i>
+                    <div class="content">
+                        <div class="title" style="text-transform: uppercase;">{$DISCORD_SERVER['members']} Users Online</div>
+                        <div class="description" onclick="dslinkopen()" style="color:white;cursor:pointer;" data-tooltip="{$CLICK_TO_JOIN}">{$DISCORD_SERVER['name']}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {else}
+        <div class="column" id="pcnavbar"></div>
+    {/if}
+    <div class="column" style="text-align: center;">
+        <div class="ui medium image">
+            <img src="{$LOGO_IMAGE}" style="cursor:pointer; display: unset; max-width: 100%; height: auto;">
+        </div>
+    </div>
+    {if $MINECRAFTVIEW eq '1'}
+        <div class="column" style="text-align: center; margin-top: 2rem;" id="pcnavbar">
+            <div class="ui steps">
+                <div class="step" style="background: transparent; color: white;">
+                    <i class="circle play icon"></i>
+                    <div class="content" class="ui text shape">
+                        <div class="title" id="minecraftplayers" style="text-transform: uppercase;">Loading..</div>
+                        <div class="description" onclick="copy('#ip')" style="color:white;cursor:pointer;" data-tooltip="{$CLICK_TO_COPY}">{$MINECRAFTDOMAIN}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {/if}
+</div>
+{/if}
 <div class="ui container">
             <div class="ui negative icon message" id="ie-message">
                 <i class="exclamation triangle icon"></i>

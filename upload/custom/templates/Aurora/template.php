@@ -22,11 +22,13 @@ class Aurora_Template extends TemplateBase {
 
     /** @var Pages */
     private Pages $_pages;
+    private $_smarty;
+    private $_cache;
 
     public function __construct($cache, $smarty, $language, $user, $pages) {
         $template = [
             'name' => 'Aurora',
-            'version' => '2.1',
+            'version' => '0.2',
             'nl_version' => '2.1.1',
             'author' => '<a href="https://cxstudios.xyz/" target="_blank">BijjuXD</a>',
         ];
@@ -36,6 +38,9 @@ class Aurora_Template extends TemplateBase {
         parent::__construct($template['name'], $template['version'], $template['nl_version'], $template['author']);
 
         $this->_settings = ROOT_PATH . '/custom/templates/Aurora/template_settings/settings.php';
+       
+        $this->_smarty = $smarty;
+        $this->_cache = $cache;
 
         $this->assets()->include([
             AssetTree::FONT_AWESOME,
@@ -51,37 +56,39 @@ class Aurora_Template extends TemplateBase {
 
         $cache->setCache('template_settings');
         $smartyDarkMode = false;
-        $smartyNavbarColour = '';
 
         if (defined('DARK_MODE') && DARK_MODE == '1') {
             $smartyDarkMode = true;
         }
 
-        if ($cache->isCached('navbarColour')) {
-            $navbarColour = $cache->retrieve('navbarColour');
-
-            if ($navbarColour != 'white') {
-                $smartyNavbarColour = $navbarColour . ' inverted';
-            }
-        }
-
         $smarty->assign([
-            'DEFAULT_REVAMP_DARK_MODE' => $smartyDarkMode,
-            'DEFAULT_REVAMP_NAVBAR_EXTRA_CLASSES' => $smartyNavbarColour
+            'DEFAULT_REVAMP_DARK_MODE' => $smartyDarkMode
         ]);
 
         $this->_template = $template;
         $this->_language = $language;
         $this->_user = $user;
         $this->_pages = $pages;
-    }
+        require_once('template_settings/class/AuroraUtil.php');
+        AuroraUtil::initialise();
+
+        $smarty->assign([
+            'CLICK_TO_JOIN' => AuroraUtil::getLanguage('frontend', 'click_to_join'),
+            'MEMBERS_ONLINE' => AuroraUtil::getLanguage('frontend', 'members_online'),
+            'CLICK_TO_COPY' => $language->get('general', 'click_to_copy_tooltip'),
+            'PLAYERS_ONLINE' => AuroraUtil::getLanguage('frontend', 'players_online'),
+            'ABOUT' => $language->get('user', 'about')
+        ]);
+
+}
 
     public function onPageLoad() {
         $page_load = microtime(true) - PAGE_START_TIME;
         define('PAGE_LOAD_TIME', $this->_language->get('general', 'page_loaded_in', ['time' => round($page_load, 3)]));
 
         $this->addCSSFiles([
-            $this->_template['path'] . 'css/custom.css?v=211' => []
+            $this->_template['path'] . 'css/custom.css?v=211' => [],
+            $this->_template['path'] . 'css/aurora.css?v=211' => []
         ]);
 
         $route = (isset($_GET['route']) ? rtrim($_GET['route'], '/') : '/');
@@ -146,6 +153,7 @@ class Aurora_Template extends TemplateBase {
         foreach ($this->_pages->getAjaxScripts() as $script) {
             $this->addJSScript('$.getJSON(\'' . $script . '\', function(data) {});');
         }
+        require_once('template_settings/frontend.php');
     }
 }
 

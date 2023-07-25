@@ -26,7 +26,7 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 
         <meta name="author" content="{$smarty.const.SITE_NAME}">
         <meta name='description' content='{$PAGEDESCRIPTION}' />
-        <meta name='keywords' content='{$PAGEKEYWORDS}' />
+        <meta name='keywords' content='{$KEYWORDS}' />
 
         <meta property="og:title" content="{$TITLE} &bull; {$smarty.const.SITE_NAME}" />
         <meta property="og:type" content="website" />
@@ -46,6 +46,12 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
         {foreach from=$TEMPLATE_CSS item=css}
             {$css}
         {/foreach}
+            {if isset($CUSTOMCSS)}
+            <style>
+                {$CUSTOMCSS}
+            </style>
+             {/if}
+
 
         {if isset($ANALYTICS_ID)}
             {literal}

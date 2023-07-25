@@ -1,16 +1,13 @@
 </div>
 </div>
 
+{if $FOOTERSTYLE eq '0'}
  <div class="ui inverted vertical footer segment" id="footer">
   <div class="ui container">
    <div class="ui stackable inverted divided grid">
     <div class="five wide column">
-     <h4 class="ui inverted header">About Us</h4>
-     {* ABOUT US CONTENT *}
-     <p>Our community has been around for many years and pride ourselves on offering unbiased, 
-        critical discussion among people of all different backgrounds. 
-        We are working every day to make sure our community is one of the best.
-     </p>
+     <h4 class="ui inverted header">{$ABOUT}</h4>
+     <p>{$FOOTERABOUT}</p>
    </div>
     <div class="four wide column">
      <h4 class="ui inverted header">{$SITE_NAME}</h4>
@@ -96,6 +93,28 @@
      </div>
    </div>
    </div>
+{else}
+ <div class="ui inverted vertical footer segment" id="footer">
+  <div class="ui container">
+     <div class="center aligned">
+        <span class="item">&copy; <strong>{$SITE_NAME}</strong> {'Y'|date}</span> |
+        <span class="item">Powered By <a href="https://namelessmc.com">NamelessMC</a></span> <br>
+        <span class="item">Theming with <i class="fa-solid fa-heart fa-beat" style="color: #d90d0d;"></i> by <a href="https://cxstudios.xyz">cxSTUDIOS</a></span>
+     </div>
+    <br>
+   <div class="center aligned">
+     <div class="ui horizontal inverted small divided link list"> 
+        <a class="item" href="/cache/sitemaps/sitemap-index.xml">Site Map</a>
+        <a class="item" href="#">Contact Us</a>
+        <a class="item" href="{$TERMS_LINK}">{$TERMS_TEXT}</a>
+        <a class="item" href="{$PRIVACY_LINK}">{$PRIVACY_TEXT}</a>
+      </div>
+     </div>
+   </div>
+   </div>
+{/if}
+
+
 {if isset($GLOBAL_WARNING_TITLE)}
 <div class="ui medium modal" id="modal-acknowledge">
     <div class="header">
@@ -120,6 +139,35 @@
 </script>
 {/if}
 
+    <script type="text/javascript">
+var url = "https://api.minetools.eu/ping/{$MINECRAFTIP}{if $MINECRAFTPORT != '25565'}/{$MINECRAFTPORT}{/if}";
+$.getJSON(url, function(r) {
+    if (r.error) {
+        $('h2').html('Server Offline');
+        $('#minecraftplayers').html('Server Offline');
+        return false;
+    } else {
+        $('#minecraftplayers').html(+ r.players.online + ' Players Online');
+    }
+});
+    </script>
+{if isset($CUSTOMJS)}
+<script>
+{$CUSTOMJS}
+</script>
+{/if}
+<script type="text/javascript">
+document.getElementById("dslink").addEventListener("click", function() {
+  var url = "{$DISCORD_SERVER['link']}";
+  window.open(url, "_blank");
+});
+</script>
+  <script type="text/javascript">
+    function dslinkopen() {
+      var url = "{$DISCORD_SERVER['link']}";
+      window.open(url, "_blank");
+    }
+  </script>
 <script type="text/javascript">
     function toggleDarkLightMode() {
         $.post("{$DARK_LIGHT_MODE_ACTION}", { token: "{$DARK_LIGHT_MODE_TOKEN}" })

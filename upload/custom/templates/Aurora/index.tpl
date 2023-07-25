@@ -86,47 +86,44 @@
   <div class="ui centered row">
     <div class="ui sixteen wide column">
       <div class="ui padded segment">
-        <h1 class="ui header">Portfolio <a href="#" target="_blank" class="ui mini button right floated"><i class="fa-solid fa-up-right-from-square"></i> All Projects</a></h1>
+        <h1 class="ui header">{$CARDT} <a href="{$CARDW}" target="_blank" class="ui mini button right floated"><i class="fa-solid fa-up-right-from-square"></i> All Projects</a></h1>
          <div class="ui grid">
-
-    <! Portfolio card 1 >
          <div class="eight wide column">
             <div class="ui segment" style="height:100%;">
-              <div class="ui header">My Project <a href="#" target="_blank" class="ui mini blue button right floated">Website</a></div>
+              <div class="ui header">{$CARD1T} <a href="{$CARD1W}" target="_blank" class="ui mini blue button right floated">Website</a></div>
                 <div class="ui slide masked reveal image">
-                  <img src="https://i.imgur.com/nvWYgJY.png" class="visible content" style="border-radius:2%;">
-                  <img src="https://i.imgur.com/9nZfJ0c.png" class="hidden content"  style="border-radius:2%;">
-                </div> 
-             </div>
-         </div>
-   <! Portfolio card 1 end >
-
-         <div class="eight wide column">
-            <div class="ui segment" style="height:100%;">
-              <div class="ui header">My Project <a href="#" target="_blank" class="ui mini blue button right floated">Website</a></div>
-                <div class="ui slide masked reveal image">
-                  <img src="https://i.imgur.com/nvWYgJY.png" class="visible content" style="border-radius:2%;">
-                  <img src="https://i.imgur.com/9nZfJ0c.png" class="hidden content"  style="border-radius:2%;">
+                  <img src="{$CARD1V}" class="visible content" style="border-radius:2%;">
+                  <img src="{$CARD1H}" class="hidden content"  style="border-radius:2%;">
                 </div> 
              </div>
          </div>
 
          <div class="eight wide column">
             <div class="ui segment" style="height:100%;">
-              <div class="ui header">My Project <a href="#" target="_blank" class="ui mini blue button right floated">Website</a></div>
+              <div class="ui header">{$CARD2T} <a href="{$CARD2W}" target="_blank" class="ui mini blue button right floated">Website</a></div>
                 <div class="ui slide masked reveal image">
-                  <img src="https://i.imgur.com/nvWYgJY.png" class="visible content" style="border-radius:2%;">
-                  <img src="https://i.imgur.com/9nZfJ0c.png" class="hidden content"  style="border-radius:2%;">
+                  <img src="{$CARD2V}" class="visible content" style="border-radius:2%;">
+                  <img src="{$CARD2H}" class="hidden content"  style="border-radius:2%;">
                 </div> 
              </div>
          </div>
 
          <div class="eight wide column">
             <div class="ui segment" style="height:100%;">
-              <div class="ui header">My Project <a href="#" target="_blank" class="ui mini blue button right floated">Website</a></div>
+              <div class="ui header">{$CARD3T} <a href="{$CARD3W}" target="_blank" class="ui mini blue button right floated">Website</a></div>
                 <div class="ui slide masked reveal image">
-                  <img src="https://i.imgur.com/nvWYgJY.png" class="visible content" style="border-radius:2%;">
-                  <img src="https://i.imgur.com/9nZfJ0c.png" class="hidden content"  style="border-radius:2%;">
+                  <img src="{$CARD3V}" class="visible content" style="border-radius:2%;">
+                  <img src="{$CARD3H}" class="hidden content"  style="border-radius:2%;">
+                </div> 
+             </div>
+         </div>
+
+         <div class="eight wide column">
+            <div class="ui segment" style="height:100%;">
+              <div class="ui header">{$CARD4T} <a href="{$CARD4W}" target="_blank" class="ui mini blue button right floated">Website</a></div>
+                <div class="ui slide masked reveal image">
+                  <img src="{$CARD4V}" class="visible content" style="border-radius:2%;">
+                  <img src="{$CARD4H}" class="hidden content"  style="border-radius:2%;">
                 </div> 
              </div>
          </div>
