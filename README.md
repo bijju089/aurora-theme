@@ -25,21 +25,9 @@ Aurora is new opensource theme made using fomantic ui for NamelessMC.
 - [NamelessMC](https://namelessmc.com/download/) v2.1.1
   - We always recommend you to use latest version of namelessmc.
 - Latest version of browser (Internet Explorer not supported)
-### Supported Modules
-- Resources
-- Store
-- Members
-- Modules that are not listed here should support Aurora template
 
-## Configuring Theme
-
-Few settings are available at mainpage of template_settings.
-Few settings can be configured manually.
-
-## Contribute us
+## HELP THE DEVELOPMENT
 Help to the development of Aurora theme by Forking this repo and Contributing back!
 
-## Wiki
-> Visit our wiki for theme configuring https://wiki.cxstudios.xyz/docs/aurora
 ## Community Support
 Feel free to join our [discord](https://discord.gg/creativmap) server for template support.
