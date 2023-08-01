@@ -14,12 +14,16 @@ Aurora is new opensource theme made using fomantic ui for NamelessMC.
 **Supported Modules**:
 - Member List
 - Store Module
-- Resources Module <br>
+- Resources Module
+-  <br>
 
 **How to add Module support**:
 - Instead of uploading module files to /DefaultRevamp/ folder, upload it to /Aurora folder
 > We'll appreciate if you help us adding module support by cloning this repo
 
+### Supported Languages
+- English UK (100%)
+- English US (40%)
 ### What you'll need
 
 - [NamelessMC](https://namelessmc.com/download/) v2.1.1
@@ -30,4 +34,4 @@ Aurora is new opensource theme made using fomantic ui for NamelessMC.
 Help to the development of Aurora theme by Forking this repo and Contributing back!
 
 ## Community Support
-Feel free to join our [discord](https://discord.gg/creativmap) server for template support.
+Feel free to join our [discord](https://cxstudios.xyz/discord) server for template support.
