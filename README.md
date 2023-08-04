@@ -23,7 +23,6 @@ Aurora is new opensource theme made using fomantic ui for NamelessMC.
 
 ### Supported Languages
 - English UK (100%)
-- English US (40%)
 ### What you'll need
 
 - [NamelessMC](https://namelessmc.com/download/) v2.1.1
