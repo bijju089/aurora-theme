@@ -13,11 +13,11 @@
      <h4 class="ui inverted header">{$SITE_NAME}</h4>
                    <div class="ui inverted link list">
                     <span class="item">&copy; <strong>{$SITE_NAME}</strong> {'Y'|date}</span>
-                    {if $userLoggedIn}
-                    <a class="item" href="/register">Register</a>
-                    <a class="item" href="/login">Login</a>
+                    {if !isset($LOGGED_IN_USER)}
+                    <a class="item" href="/register">{$REGISTER}</a>
+                    <a class="item" href="/login">{$LOGIN}</a>
                     {else}
-                    <a class="item" href="/user">Account Settings</a>
+                    <a class="item" href="/user">{$ACCOUNT_SETTINGS}</a>
                     {/if}
                     {if $PAGE_LOAD_TIME}
                     <span class="item" id="page_load"></span>

@@ -1,4 +1,4 @@
-<div class="ui fluid card">
+<div class="ui fluid {if $SHADOWEFFECTS eq '0' }raised{/if} card">
     <div class="content">
         <h4 class="ui header">{$COOKIE_NOTICE_HEADER}</h4>
         <div class="description">

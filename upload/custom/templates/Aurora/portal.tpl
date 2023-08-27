@@ -6,16 +6,18 @@
               <img src="{$LOGO_IMAGE}">
           </div>
 <div style="margin-top: 50px;">
-  <a href="/" class="ui inverted  big button">Home</a>
-  <a href="/forum" class="ui inverted big primary button">Forum</a>
-  <a href="/store" class="ui inverted big violet button">Store</a>
-  <a href="/status" class="ui inverted big red button">Status</a>
-  <a href="/members" class="ui inverted big orange button">Members</a>
+  <a href="{$BUTTON1L}" style="width:120px;" class="ui inverted big button">
+   <h1><i class="{$BUTTON1I}"></i></h1><h4>{$BUTTON1T}</h4></a>
+  <a href="{$BUTTON2L}" style="width:120px;" class="ui inverted big button">
+   <h1><i class="{$BUTTON2I}"></i></h1><h4>{$BUTTON2T}</h4></a>
+  <a href="{$BUTTON3L}" style="width:120px;" class="ui inverted big button">
+   <h1><i class="{$BUTTON3I}"></i></h1><h4>{$BUTTON3T}</h4></a>
+  <a href="{$BUTTON4L}" style="width:120px;" class="ui inverted big button">
+   <h1><i class="{$BUTTON4I}"></i></h1><h4>{$BUTTON4T}</h4></a>
 </div>
 <div style="margin-top: 50px;">
-<button class="ui inverted big violet button" data-tooltip="Join Now">{$SERVER_QUERY.x_players_online}</button>
+<p style="color:grey;">&copy; {$SITE_NAME} 2023</p>
 </div>
 </div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="js/portal/firefly.js"></script>
 </body>
+

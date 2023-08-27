@@ -45,24 +45,32 @@
                     <option value="1" {if $NAVBARSTYLE eq '1' } selected{/if}>{$NAVBARDYNAMIC_LABEL}</option>
                 </select>
             </div>
+            <div class="form-group">
+                <input type="hidden" name="token" value="{$TOKEN}">
+                <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i>
+                    {$SUBMIT}</button>
+            </div>
+</form>
                {if $NAVBARSTYLE eq '0'}
                <hr />
+        <form action="" method="POST">
+            <input type="hidden" name="sel_btn_session" value="navbar" />
                <h3 class="text-center">{$SOCIAL_LINK}</h3>
                 <div class="form-group">
                     <input type="text" class="form-control" id="inputSocialLink1" name="socialLink1"
-                        placeholder="Youtube Link" value="{$SOCIAL_LINK_1}">
+                        placeholder="Youtube Link" value="{$SOCIALLINK1}">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" id="inputSocialLink2" name="socialLink2"
-                        placeholder="Discord Server Link" value="{$SOCIAL_LINK_2}">
+                        placeholder="Discord Server Link" value="{$SOCIALLINK2}">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" id="inputSocialLink3" name="socialLink3"
-                        placeholder="Twitter Link" value="{$SOCIAL_LINK_3}">
+                        placeholder="Twitter Link" value="{$SOCIALLINK3}">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" id="inputSocialLink4" name="socialLink4"
-                        placeholder="Facebook Link" value="{$SOCIAL_LINK_4}">
+                        placeholder="Facebook Link" value="{$SOCIALLINK4}">
                 </div>
             {/if}
             <div class="form-group">

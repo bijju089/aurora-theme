@@ -1,6 +1,6 @@
-<div class="ui fluid card" id="widget-latest-posts">
+<div class="ui fluid {if $SHADOWEFFECTS eq '0' }raised{/if} card" id="widget-latest-posts">
     <div class="content">
-        <h4 class="ui header">{$SERVER_STATUS}</h4>
+        <div class="ui fluid centered label" style="margin-bottom:10px;"><i class="fa-solid fa-server"></i> {$SERVER_STATUS}</div>
         <div class="description">
             {if isset($SERVER)}
             <div class="ui relaxed">

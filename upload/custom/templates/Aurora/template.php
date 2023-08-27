@@ -28,7 +28,7 @@ class Aurora_Template extends TemplateBase {
     public function __construct($cache, $smarty, $language, $user, $pages) {
         $template = [
             'name' => 'Aurora',
-            'version' => '0.4',
+            'version' => '0.5',
             'nl_version' => '2.1.1',
             'author' => '<a href="https://cxstudios.xyz/" target="_blank">BijjuXD</a>',
         ];
@@ -72,12 +72,26 @@ class Aurora_Template extends TemplateBase {
         require_once('template_settings/class/AuroraUtil.php');
         AuroraUtil::initialise();
 
+// Assign Language
         $smarty->assign([
             'CLICK_TO_JOIN' => AuroraUtil::getLanguage('frontend', 'click_to_join'),
             'MEMBERS_ONLINE' => AuroraUtil::getLanguage('frontend', 'members_online'),
-            'CLICK_TO_COPY' => $language->get('general', 'click_to_copy_tooltip'),
+            'CLICK_TO_COPY' => AuroraUtil::getLanguage('general', 'click_to_copy_tooltip'),
             'PLAYERS_ONLINE' => AuroraUtil::getLanguage('frontend', 'players_online'),
-            'ABOUT' => $language->get('user', 'about')
+            'AURORA_VER' => AuroraUtil::getLanguage('frontend', 'template_version', [
+               'version' => '' . $template["version"] . ''
+             ]),
+            'AURORA_AUTHOR' => AuroraUtil::getLanguage('frontend', 'template_author', [
+               'author' => '' . $template["author"] . ''
+             ]),
+            'PORTAL_THERE_ARE_CURRENTLY' => AuroraUtil::getLanguage('frontend', 'portal_there_are_currently'),
+            'PORTAL_PLAYERS_ONLINE' => AuroraUtil::getLanguage('frontend', 'portal_players_online'),
+            'ABOUT' => AuroraUtil::getLanguage('frontend', 'about'),
+            'BE_THE_FIRST' => AuroraUtil::getLanguage('module', 'be_the_first'),
+            'SEND_FEEDBACK' => AuroraUtil::getLanguage('module', 'send_feedback'),
+            'ACCOUNT_SETTINGS' => AuroraUtil::getLanguage('user', 'account_settings'),
+            'REGISTER' => AuroraUtil::getLanguage('user', 'register'),
+            'LOGIN' => AuroraUtil::getLanguage('user', 'login')
         ]);
 
 }
@@ -87,7 +101,7 @@ class Aurora_Template extends TemplateBase {
         define('PAGE_LOAD_TIME', $this->_language->get('general', 'page_loaded_in', ['time' => round($page_load, 3)]));
 
         $this->addCSSFiles([
-            $this->_template['path'] . 'css/custom.css?v=211' => [],
+            $this->_template['path'] . 'css/fomantic.css?v=211' => [],
             $this->_template['path'] . 'css/aurora.css?v=211' => []
         ]);
 

@@ -10,9 +10,9 @@
                 id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                 {include file="{$TPL_PATH}home.tpl"}
             </div>
-            <div class="tab-pane fade {if $TPL_NAME_SESSION eq 'colors'}show active{/if}" id="v-pills-colors"
-                role="tabpanel" aria-labelledby="v-pills-colors-tab">
-                {include file="{$TPL_PATH}colors.tpl"}
+            <div class="tab-pane fade {if $TPL_NAME_SESSION eq 'theme'}show active{/if}" id="v-pills-theme"
+                role="tabpanel" aria-labelledby="v-pills-theme-tab">
+                {include file="{$TPL_PATH}theme.tpl"}
             </div>
             <div class="tab-pane fade {if $TPL_NAME_SESSION eq 'navbar'}show active{/if}" id="v-pills-navbar"
                 role="tabpanel" aria-labelledby="v-pills-navbar-tab">
@@ -30,6 +30,11 @@
             <div class="tab-pane fade {if $TPL_NAME_SESSION eq 'portal'}show active{/if}" id="v-pills-portal"
                 role="tabpanel" aria-labelledby="v-pills-portal-tab">
                 {include file="{$TPL_PATH}portal.tpl"}
+            </div>
+
+            <div class="tab-pane fade {if $TPL_NAME_SESSION eq 'welcome'}show active{/if}" id="v-pills-welcome"
+                role="tabpanel" aria-labelledby="v-pills-welcome-tab">
+                {include file="{$TPL_PATH}welcome.tpl"}
             </div>
 
             <div class="tab-pane fade {if $TPL_NAME_SESSION eq 'footer'}show active{/if}" id="v-pills-footer"

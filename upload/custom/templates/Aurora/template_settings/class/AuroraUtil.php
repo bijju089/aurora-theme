@@ -128,6 +128,7 @@ class AuroraUtil
             'minecraftDomain' => 'play.cubedcraft.com',
             'minecraftIP' => 'play.cubedcraft.com',
             'minecraftPort' => 25565,
+            'shadowEffects' => 0,
             'cardt' => 'Portfolio',
             'cardw' => 'https://cxstudios.xyz/exampleproject',
             'card1t' => 'My Project',
@@ -146,6 +147,18 @@ class AuroraUtil
             'card4w' => 'https://cxstudios.xyz/exampleproject',
             'card4v' => 'https://i.imgur.com/nvWYgJY.png',
             'card4h' => 'https://i.imgur.com/9nZfJ0c.png',
+            'button1t' => 'Home',
+            'button1i' => 'fa-solid fa-house',
+            'button1l' => '/',
+            'button2t' => 'Forum',
+            'button2i' => 'fa-solid fa-comments',
+            'button2l' => '/forum',
+            'button3t' => 'Store',
+            'button3i' => 'fa-solid fa-cart-shopping',
+            'button3l' => '/store',
+            'button4t' => 'Members',
+            'button4i' => 'fa-solid fa-users',
+            'button4l' => '/members',
             'socialLink1' => 'https://www.youtube.com/@crteam',
             'socialLink2' => 'https://discord.gg/creativmap',
             'socialLink3' => 'https://twitter.com/cxstudios1',
@@ -155,7 +168,10 @@ class AuroraUtil
             'footerStyle' => 0,
             'customCSS' => '',
             'customJS' => '',
-            'Keywords' => ''
+            'Keywords' => '',
+            'welcomeSection' => 0,
+            'welcomeHeader' => 'Welcome to Aurora',
+            'welcomeDescription' => 'To join our community, please authenticate.'
         ];
 
         foreach ($settings_data as $key => $value) {

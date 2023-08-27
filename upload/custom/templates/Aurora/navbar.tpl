@@ -106,10 +106,10 @@
        <div class="ui container">
          <div class="row">
            <div class="ui icon buttons">
-              <a href="{$SOCIAL_LINK_1}" class="ui button"><i class="fa-brands fa-youtube"></i></a>
-              <a href="{$SOCIAL_LINK_2}" class="ui button"><i class="fa-brands fa-discord"></i></a>
-              <a href="{$SOCIAL_LINK_3}" class="ui button"><i class="fa-brands fa-twitter"></i></a>
-              <a href="{$SOCIAL_LINK_4}" class="ui button"><i class="fa-brands fa-facebook"></i></a>
+              <a href="{$SOCIALLINK1}" class="ui button"><i class="fa-brands fa-youtube"></i></a>
+              <a href="{$SOCIALLINK2}" class="ui button"><i class="fa-brands fa-discord"></i></a>
+              <a href="{$SOCIALLINK3}" class="ui button"><i class="fa-brands fa-twitter"></i></a>
+              <a href="{$SOCIALLINK4}" class="ui button"><i class="fa-brands fa-facebook"></i></a>
           </div>
           {if $DISCORDVIEW eq '1'}
            <button class="ui right floated large button" onclick="dslinkopen()" 
@@ -175,6 +175,19 @@
 </div>
 {/if}
 <div class="ui container">
+    {if $WELCOMESECTION eq '0' && !isset($LOGGED_IN_USER)}
+<div class="ui clearing segment">
+  <div class="ui centered header">
+    {$WELCOMEHEADER}
+  <h4 class="description">
+    {$WELCOMEDESCRIPTION}
+  </h4>
+                    <a href="/login" class="ui small button">{$LOGIN}</a>
+                    <a href="/register" class="ui small primary button">{$REGISTER}</a>
+  </div>
+</div> 
+  {/if}
+
             <div class="ui negative icon message" id="ie-message">
                 <i class="exclamation triangle icon"></i>
                 <div class="content">

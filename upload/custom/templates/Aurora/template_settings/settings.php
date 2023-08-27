@@ -5,7 +5,7 @@
  *  NamelessMC version 2.1.1
  *
  *  License: MIT
- *  Special thanks to Vertisan
+ *  Special thanks to Vertisan 
  *
  */
 /*
@@ -18,6 +18,7 @@
 $template_file = 'page/main.tpl';
 
 require_once('class/AuroraUtil.php');
+require_once('updatechecker.php');
 require_once(ROOT_PATH . '/core/templates/backend_init.php');
 
 
@@ -41,12 +42,13 @@ $smarty->assign([
     // Navigation
         'NAVIGATION' => AuroraUtil::getLanguage('navigation', 'navigation'),
         'HOME_PAGE' => AuroraUtil::getLanguage('navigation', 'home_page'),
-        'COLORS_PAGE' => AuroraUtil::getLanguage('navigation', 'colors_page'),
+        'THEME_PAGE' => AuroraUtil::getLanguage('navigation', 'theme_page'),
         'NAVBAR_PAGE' => AuroraUtil::getLanguage('navigation', 'navbar_page'),
         'CONNECTIONS_PAGE' => AuroraUtil::getLanguage('navigation', 'connections_page'),
         'CARDCONTENT_PAGE' => AuroraUtil::getLanguage('navigation', 'cardcontent_page'),
         'FOOTER_PAGE' => AuroraUtil::getLanguage('navigation', 'footer_page'),
         'PORTAL_PAGE' => AuroraUtil::getLanguage('navigation', 'portal_page'),
+        'WELCOME_PAGE' => AuroraUtil::getLanguage('navigation', 'welcome_page'),
         'CUSTOM_PAGE' => AuroraUtil::getLanguage('navigation', 'custom_page'),
         'SEO_PAGE' => AuroraUtil::getLanguage('navigation', 'seo_page'),
         'SUPPORT_PAGE' => AuroraUtil::getLanguage('navigation', 'support_page'),
@@ -57,28 +59,9 @@ $smarty->assign([
            'riLinkEnd' => '</a>'
         ]),
 
-    // Colors
-    // Currently unused
-        'DARKMODE_LABEL' => AuroraUtil::getLanguage('colors', 'darkmode_label'),
-        'COLORSSTYLE_LABEL' => AuroraUtil::getLanguage('colors', 'colorsstyle_label'),
-        'COLORSSTYLE_NORMAL_LABEL' => AuroraUtil::getLanguage('colors', 'colorsstyle_normal_label'),
-        'COLORSSTYLE_COLORS_LABEL' => AuroraUtil::getLanguage('colors', 'colorsstyle_colors_label'),
-        'PRIMARYCOLOR_LABEL' => AuroraUtil::getLanguage('colors', 'primarycolor_label'),
-        'NAVBARCOLOR_LABEL' => AuroraUtil::getLanguage('colors', 'navbarcolor_label'),
-        'FOOTERCOLOR_LABEL' => AuroraUtil::getLanguage('colors', 'footercolor_label'),
-        'OUTLINECOLOR_LABEL' => AuroraUtil::getLanguage('colors', 'outlinecolor_label'),
-        'OUTLINECOLOR_INFO_LABEL' => AuroraUtil::getLanguage('colors', 'outlinecolor_info_label', [
-            'colorCodeStart' => '<code>',
-            'colorCodeEnd' => '</code>'
-        ]),
-        'COLORS_INFO_LABEL' => AuroraUtil::getLanguage('colors', 'colors_info_label', [
-            'colorCodeStart' => '<code>',
-            'colorCodeEnd' => '</code>'
-        ]),
-        'NAVBARTEXTCOLOR_LABEL' => AuroraUtil::getLanguage('colors', 'navbartextcolor_label'),
-        'NAVBARTEXT_NORMAL_LABEL' => AuroraUtil::getLanguage('colors', 'navbartext_normal_label'),
-        'NAVBARTEXT_BLACK_LABEL' => AuroraUtil::getLanguage('colors', 'navbartext_black_label'),
-        'NAVBARTEXT_WHITE_LABEL' => AuroraUtil::getLanguage('colors', 'navbartext_white_label'),
+    // Theme Options
+        'SHADOWEFFECTS_LABEL' => AuroraUtil::getLanguage('theme', 'shadoweffects_label'),
+        'SHADOWEFFECTS_INFO_LABEL' => AuroraUtil::getLanguage('theme', 'shadoweffects_info_label'),
 
     // Navbar
         'NAVBARLOGO_LABEL' => AuroraUtil::getLanguage('navbar', 'navbarlogo_label'),
@@ -131,6 +114,13 @@ $smarty->assign([
         'CARD_VISIBLEIMAGE' => AuroraUtil::getLanguage('card', 'card_visibleimage'),
         'CARD_HIDENIMAGE' => AuroraUtil::getLanguage('card', 'card_hidenimage'),
         'CUSTOM_CONTENT_NOT_SET' => AuroraUtil::getLanguage('card', 'custom_content_not_set'),
+        'CARDCONTENT_INFO' => AuroraUtil::getLanguage('card', 'cardcontent_info'),
+
+    // Welcome Section
+        'WELCOMESECTION_INFO_LABEL' => AuroraUtil::getLanguage('welcome', 'welcomesection_info_label'),
+        'WELCOMESECTION_LABEL' => AuroraUtil::getLanguage('welcome', 'welcomesection_label'),
+        'WELCOMEHEADER_LABEL' => AuroraUtil::getLanguage('welcome', 'welcomeheader_label'),
+        'WELCOMEDESCRIPTION_LABEL' => AuroraUtil::getLanguage('welcome', 'welcomedescription_label'),
 
     // Footer
         'FOOTERABOUT_LABEL' => AuroraUtil::getLanguage('options', 'footerabout_label'),
@@ -142,6 +132,9 @@ $smarty->assign([
            'piLinkEnd' => '</a>'
         ]),
         'PORTAL_NOT_SET' => AuroraUtil::getLanguage('portal', 'portal_not_set'),
+        'PORTAL_BTN_TITLE' => AuroraUtil::getLanguage('portal', 'portal_btn_title'),
+        'PORTAL_BTN_LINK' => AuroraUtil::getLanguage('portal', 'portal_btn_link'),
+        'PORTAL_BTN_ICON' => AuroraUtil::getLanguage('portal', 'portal_btn_icon'),
 
 
     // Custom Code
@@ -167,7 +160,7 @@ if (!isset($_POST['sel_btn'])) {
         $errors = [];
 
         foreach ($_POST as $key => $value) {
-            if ($key == 'token') {
+            if ($key == 'token' or $key == 'sel_btn_session') {
                 continue;
             }
             AuroraUtil::updateOrCreateParam($key, $value);
@@ -185,9 +178,13 @@ if (Session::exists('staff'))
     $success = Session::flash('staff');
     $TPL_NAME_SESSION = '';
 
+if (Session::exists('sel_btn_session'))
+    $TPL_NAME_SESSION = Session::flash('sel_btn_session');
+
 $smarty->assign([
     'TPL_NAME_SESSION' => $TPL_NAME_SESSION
 ]);
+
 
 if (isset($success))
     $smarty->assign([

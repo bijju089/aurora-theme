@@ -1,6 +1,6 @@
-<div class="ui fluid card" id="widget-new-resources">
+<div class="ui fluid {if $SHADOWEFFECTS eq '0' }raised{/if} card" id="widget-new-resources">
     <div class="content">
-        <h4 class="ui header"><i class="fa-solid fa-memo"></i> {$UPDATED_RESOURCES_TITLE}</h4>
+        <div class="ui fluid centered label" style="margin-bottom:10px;"><i class="fa-solid fa-memo"></i> {$UPDATED_RESOURCES_TITLE}</div>
         <div class="description">
             {if count($UPDATED_RESOURCES)}
                 {foreach from=$UPDATED_RESOURCES item=resource}

@@ -1,11 +1,15 @@
-<!-- Connections Content -->
+<!-- Cards Content -->
 <div class="card mb-3">
     <h3 class="card-header mb-3 text-center">{$CARDCONTENT_PAGE}</h3>
     <div class="card-body">
-        {if $HOME_TYPE === 'custom'}
         <h3 class="text-center">Settings</h3>
         <form action="" method="POST">
             <input type="hidden" name="sel_btn_session" value="cardcontent" />
+            <div class="form-group">
+                <div class="alert alert-info" role="info">
+                 {$CARDCONTENT_INFO}
+                 </div>            
+            </div>
             <div class="form-group">
                 <label for="cardt">{$CARD_TITLE}</label>
                     <input type="text" class="form-control" id="inputCardt" name="cardt"
@@ -26,7 +30,7 @@
         <hr />
         <h3 class="text-center">Card 1</h3>
         <form action="" method="POST">
-            <input type="hidden" name="sel_btn_session" value="connections" />
+            <input type="hidden" name="sel_btn_session" value="cardcontent" />
             <div class="form-group">
                 <label for="card1t">{$CARD_TITLE}</label>
                     <input type="text" class="form-control" id="inputCard1t" name="card1t"
@@ -56,7 +60,7 @@
         <hr />
         <h3 class="text-center">Card 2</h3>
         <form action="" method="POST">
-            <input type="hidden" name="sel_btn_session" value="connections" />
+            <input type="hidden" name="sel_btn_session" value="cardcontent" />
             <div class="form-group">
                 <label for="card2t">{$CARD_TITLE}</label>
                     <input type="text" class="form-control" id="inputCard2t" name="card2t"
@@ -86,7 +90,7 @@
         <hr />
         <h3 class="text-center">Card 3</h3>
         <form action="" method="POST">
-            <input type="hidden" name="sel_btn_session" value="connections" />
+            <input type="hidden" name="sel_btn_session" value="cardcontent" />
             <div class="form-group">
                 <label for="card3t">{$CARD_TITLE}</label>
                     <input type="text" class="form-control" id="inputCard3t" name="card3t"
@@ -116,7 +120,7 @@
         <hr />
         <h3 class="text-center">Card 4</h3>
         <form action="" method="POST">
-            <input type="hidden" name="sel_btn_session" value="connections" />
+            <input type="hidden" name="sel_btn_session" value="cardcontent" />
             <div class="form-group">
                 <label for="card4t">{$CARD_TITLE}</label>
                     <input type="text" class="form-control" id="inputCard4t" name="card4t"
@@ -142,14 +146,6 @@
                 <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i>
                     {$SUBMIT}</button>
             </div>
-            {else}
-            <div class="form-group">
-                <div class="alert alert-danger" role="alert">
-                 {$CUSTOM_CONTENT_NOT_SET}
-                 </div>            
-            </div>
-         <hr />
-           {/if}
         </form>
     </div>
 </div>

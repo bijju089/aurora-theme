@@ -79,7 +79,7 @@
     <div class="header">
         {$NO_REVIEWS}
     </div>
-    <p><b>Be the First!</b> Send a feedback to your favourite resource!</p>
+    <p><b>{$BE_THE_FIRST}</b> {$SEND_FEEDBACK}</p>
   </div>
 </div>                        {/if}
 

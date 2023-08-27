@@ -3,7 +3,7 @@
     <h3 class="card-header mb-3 text-center">{$SEO_PAGE}</h3>
     <div class="card-body">
         <form action="" method="POST">
-            <input type="hidden" name="sel_btn_session" value="navbar" />
+            <input type="hidden" name="sel_btn_session" value="seo" />
             <div class="form-group">
                 <label for="moreOptions">{$MOREOPTIONS_LABEL}</label>
                       <a href="{$SITE_HOME}panel/core/seo/" class="btn btn-default w-100"><i class="fa-solid fa-arrow-up-right-from-square"></i></i>

@@ -1,6 +1,6 @@
-<div class="ui fluid card" id="widget-online-staff">
+<div class="ui fluid {if $SHADOWEFFECTS eq '0' }raised{/if} card" id="widget-online-staff">
     <div class="content">
-        <h4 class="ui header"><i class="fa-solid fa-users-gear"></i> {$ONLINE_STAFF}</h4>
+        <div class="ui fluid centered label" style="margin-bottom:10px;"><i class="fa-solid fa-users-gear"></i> {$ONLINE_STAFF}</div>
         <div class="description">
             {if isset($ONLINE_STAFF_LIST)}
                 {foreach from=$ONLINE_STAFF_LIST name=online_staff_arr item=user}
@@ -19,7 +19,8 @@
             {/if}
         </div>
     </div>
-    <div class="extra content">
+    <div class="ui center aligned extra">
         {$TOTAL_ONLINE_STAFF}
     </div>
 </div>
+

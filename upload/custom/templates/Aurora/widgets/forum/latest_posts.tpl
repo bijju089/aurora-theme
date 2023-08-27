@@ -1,6 +1,6 @@
-<div class="ui fluid card" id="widget-latest-posts">
+<div class="ui fluid {if $SHADOWEFFECTS eq '0' }raised{/if} card" id="widget-latest-posts">
     <div class="content">
-        <h4 class="ui header">{$LATEST_POSTS}</h4>
+        <div class="ui fluid centered label" style="margin-bottom:10px;"><i class="fa-solid fa-paper-plane"></i> {$LATEST_POSTS}</div>
         <div class="description">
             {foreach from=$LATEST_POSTS_ARRAY name=latest_posts item=post}
                 <div class="ui relaxed list">

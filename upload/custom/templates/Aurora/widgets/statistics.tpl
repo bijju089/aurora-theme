@@ -1,6 +1,6 @@
-<div class="ui fluid card" id="widget-statistics">
+<div class="ui fluid {if $SHADOWEFFECTS eq '0' }raised{/if} card" id="widget-statistics">
     <div class="content">
-        <h4 class="ui header"><i class="fa-solid fa-chart-bar"></i> {$STATISTICS}</h4>
+        <div class="ui fluid centered label" style="margin-bottom:10px;"><i class="fa-solid fa-chart-bar"></i> {$STATISTICS}</div>
         <div class="description">
             <div class="ui list">
                 {if isset($FORUM_STATISTICS)}

@@ -1,9 +1,9 @@
-<!-- Options Content -->
+<!-- CustomCode Content -->
 <div class="card mb-3">
     <h3 class="card-header mb-3 text-center">{$CUSTOM_PAGE}</h3>
     <div class="card-body">
         <form action="" method="POST">
-            <input type="hidden" name="sel_btn_session" value="options" />
+            <input type="hidden" name="sel_btn_session" value="custom" />
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-10">

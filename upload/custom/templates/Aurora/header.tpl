@@ -26,7 +26,7 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 
         <meta name="author" content="{$smarty.const.SITE_NAME}">
         <meta name='description' content='{$PAGEDESCRIPTION}' />
-        <meta name='keywords' content='{$KEYWORDS}' />
+        <meta name='keywords' content='{if isset ($KEYWORDS)}{$KEYWORDS}{else}{$PAGEKEYWORDS}{/if}' />
 
         <meta property="og:title" content="{$TITLE} &bull; {$smarty.const.SITE_NAME}" />
         <meta property="og:type" content="website" />
@@ -51,6 +51,26 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
                 {$CUSTOMCSS}
             </style>
              {/if}
+<style>
+    {if $NEW_SCROLLBAR eq '0' }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            background-color: #f3f6fa;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #d4d4d5;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c3c4c6;
+        }
+
+
+    {/if}
+</style>
 
 
         {if isset($ANALYTICS_ID)}

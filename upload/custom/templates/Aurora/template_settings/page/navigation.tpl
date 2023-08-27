@@ -6,9 +6,9 @@
                 id="v-pills-options-tab" data-toggle="pill" href="#v-pills-home" role="tab"
                 aria-controls="v-pills-home" aria-selected="true"><i class="fa-solid fa-home"></i> {$HOME_PAGE}</a>
 
-            <a class="nav-link {if $TPL_NAME_SESSION eq 'colors'}active{/if}" id="v-pills-colors-tab" data-toggle="pill"
-                href="#v-pills-colors" role="tab" aria-controls="v-pills-colors" aria-selected="false"><i
-                    class="fa-solid fa-paint-brush"></i> {$COLORS_PAGE}</a>
+            <a class="nav-link {if $TPL_NAME_SESSION eq 'theme'}active{/if}" id="v-pills-theme-tab" data-toggle="pill"
+                href="#v-pills-theme" role="tab" aria-controls="v-pills-theme" aria-selected="false"><i
+                    class="fa-solid fa-paint-brush"></i> {$THEME_PAGE}</a>
 
             <a class="nav-link {if $TPL_NAME_SESSION eq 'navbar'}active{/if}" id="v-pills-navbar-tab" data-toggle="pill"
                 href="#v-pills-navbar" role="tab" aria-controls="v-pills-navbar" aria-selected="false"><i
@@ -25,6 +25,10 @@
             <a class="nav-link {if $TPL_NAME_SESSION eq 'portal'}active{/if}" id="v-pills-portal-tab"
                 data-toggle="pill" href="#v-pills-portal" role="tab" aria-controls="v-pills-portal"
                 aria-selected="false"><i class="fa-brands fa-usps"></i> {$PORTAL_PAGE}</a>
+
+            <a class="nav-link {if $TPL_NAME_SESSION eq 'welcome'}active{/if}" id="v-pills-welcome-tab"
+                data-toggle="pill" href="#v-pills-welcome" role="tab" aria-controls="v-pills-welcome"
+                aria-selected="false"><i class="fa-solid fa-certificate"></i> {$WELCOME_PAGE}</a>
 
             <a class="nav-link {if $TPL_NAME_SESSION eq 'footer'}active{/if}" id="v-pills-footer-tab" data-toggle="pill"
                 href="#v-pills-footer" role="tab" aria-controls="v-pills-footer" aria-selected="false">

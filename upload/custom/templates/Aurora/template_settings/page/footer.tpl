@@ -1,4 +1,4 @@
-<!-- Options Content -->
+<!-- Footer Content -->
 <div class="card mb-3">
     <h3 class="card-header mb-3 text-center">{$FOOTER_PAGE}</h3>
     <div class="card-body">
