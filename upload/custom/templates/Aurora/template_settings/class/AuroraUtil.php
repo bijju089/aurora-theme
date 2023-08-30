@@ -67,25 +67,10 @@ class AuroraUtil
     }
     public static function initialise()
     {   
+     if (DB::getInstance()->showTables('aurora_settings')) {
+         return;
+     }
 
-        if (DB::getInstance()->showTables('aurora_settings')) {
-            $foundLegacy = false;
-
-            foreach (DB::getInstance()->query('SELECT name FROM nl2_aurora_settings')->results() as $row) {
-                if ($row->name === 'template_about') {
-                    $foundLegacy = true;
-                    break;
-                }
-            }
-
-            if ($foundLegacy) {
-                DB::getInstance()->query('DROP TABLE nl2_aurora_settings');
-            } else {
-                if (DB::getInstance()->showTables('aurora_settings')) {
-                    return;
-                }
-            }
-        }
      try {
             $group = DB::getInstance()->get('groups', ['id', '=', 2])->results();
             $group = $group[0];
