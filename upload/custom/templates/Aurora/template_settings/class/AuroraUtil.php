@@ -81,17 +81,7 @@ class AuroraUtil
         } catch (Exception $e) {
             // Error
         }
-        try {
-            $engine = Config::get('mysql/engine');
-            $charset = Config::get('mysql/charset');
-        } catch (Exception $e) {
-            $engine = 'InnoDB';
-            $charset = 'utf8mb4';
-        }
-        if (!$engine || is_array($engine))
-            $engine = 'InnoDB';
-        if (!$charset || is_array($charset))
-            $charset = 'latin1';
+
         try {
             DB::getInstance()->createTable("aurora_settings", "`id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(255) NOT NULL, `value` varchar(5000) NOT NULL, PRIMARY KEY (`id`)");
         } catch (Exception $e) {
