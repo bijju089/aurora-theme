@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * Contains misc utility methods.
+ *
+ * Aurora Template
+ * @version 0.6
+ * @license MIT
+ */
+
 class AuroraUtil
 {
     private static Language $_aurora_language;
@@ -70,7 +78,6 @@ class AuroraUtil
      if (DB::getInstance()->showTables('aurora_settings')) {
          return;
      }
-
      try {
             $group = DB::getInstance()->get('groups', ['id', '=', 2])->results();
             $group = $group[0];
@@ -81,7 +88,6 @@ class AuroraUtil
         } catch (Exception $e) {
             // Error
         }
-
         try {
             DB::getInstance()->createTable("aurora_settings", "`id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(255) NOT NULL, `value` varchar(5000) NOT NULL, PRIMARY KEY (`id`)");
         } catch (Exception $e) {
@@ -146,7 +152,10 @@ class AuroraUtil
             'Keywords' => '',
             'welcomeSection' => 0,
             'welcomeHeader' => 'Welcome to Aurora',
-            'welcomeDescription' => 'To join our community, please authenticate.'
+            'welcomeDescription' => 'To join our community, please authenticate.',
+            'widgetBot' => 0,
+            'serverID' => '299881420891881473',
+            'channelID' => '355719584830980096'
         ];
 
         foreach ($settings_data as $key => $value) {

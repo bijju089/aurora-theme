@@ -71,6 +71,7 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 
     {/if}
 </style>
+{include file='aurora/theme.tpl'}
 
 
         {if isset($ANALYTICS_ID)}

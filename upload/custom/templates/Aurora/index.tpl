@@ -84,59 +84,62 @@
       </div>
 </div>
         {/if}
-<div class="ui stackable grid">
-  <div class="ui centered row">
-    <div class="ui sixteen wide column">
-      <div class="ui padded {if $SHADOWEFFECTS eq '0' }raised{/if}  segment">
-        <h1 class="ui header">{$CARDT} <a href="{$CARDW}" target="_blank" class="ui mini button right floated"><i class="fa-solid fa-up-right-from-square"></i> All Projects</a></h1>
-         <div class="ui grid">
-         <div class="eight wide column">
-            <div class="ui segment" style="height:100%;">
-              <div class="ui header">{$CARD1T} <a href="{$CARD1W}" target="_blank" class="ui mini blue button right floated">Website</a></div>
+  <div class="ui stackable grid">
+    <div class="ui centered row">
+      <div class="ui sixteen wide column">
+        <div class="ui padded raised segment">
+          <h1 class="ui header">{$CARDT} <a href="{$CARDW}" target="_blank" class="ui mini button right floated"><i class="fa-solid fa-up-right-from-square"></i> All Projects</a></h1>
+          <div class="ui grid">
+
+            <!-- Card 1 -->
+            <div class="sixteen wide mobile eight wide tablet eight wide computer column">
+              <div class="ui segment" style="height:100%;">
+                <div class="ui header">{$CARD1T} <a href="{$CARD1W}" target="_blank" class="ui mini blue button right floated">Website</a></div>
                 <div class="ui slide masked reveal image">
                   <img src="{$CARD1V}" class="visible content" style="border-radius:2%;">
-                  <img src="{$CARD1H}" class="hidden content"  style="border-radius:2%;">
-                </div> 
-             </div>
-         </div>
+                  <img src="{$CARD1H}" class="hidden content" style="border-radius:2%;">
+                </div>
+              </div>
+            </div>
 
-         <div class="eight wide column">
-            <div class="ui segment" style="height:100%;">
-              <div class="ui header">{$CARD2T} <a href="{$CARD2W}" target="_blank" class="ui mini blue button right floated">Website</a></div>
+            <!-- Card 2 -->
+            <div class="sixteen wide mobile eight wide tablet eight wide computer column">
+              <div class="ui segment" style="height:100%;">
+                <div class="ui header">{$CARD2T} <a href="{$CARD2W}" target="_blank" class="ui mini blue button right floated">Website</a></div>
                 <div class="ui slide masked reveal image">
                   <img src="{$CARD2V}" class="visible content" style="border-radius:2%;">
-                  <img src="{$CARD2H}" class="hidden content"  style="border-radius:2%;">
-                </div> 
-             </div>
-         </div>
+                  <img src="{$CARD2H}" class="hidden content" style="border-radius:2%;">
+                </div>
+              </div>
+            </div>
 
-         <div class="eight wide column">
-            <div class="ui segment" style="height:100%;">
-              <div class="ui header">{$CARD3T} <a href="{$CARD3W}" target="_blank" class="ui mini blue button right floated">Website</a></div>
+            <!-- Card 3 -->
+            <div class="sixteen wide mobile eight wide tablet eight wide computer column">
+              <div class="ui segment" style="height:100%;">
+                <div class="ui header">{$CARD3T} <a href="{$CARD3W}" target="_blank" class="ui mini blue button right floated">Website</a></div>
                 <div class="ui slide masked reveal image">
                   <img src="{$CARD3V}" class="visible content" style="border-radius:2%;">
-                  <img src="{$CARD3H}" class="hidden content"  style="border-radius:2%;">
-                </div> 
-             </div>
-         </div>
+                  <img src="{$CARD3H}" class="hidden content" style="border-radius:2%;">
+                </div>
+              </div>
+            </div>
 
-         <div class="eight wide column">
-            <div class="ui segment" style="height:100%;">
-              <div class="ui header">{$CARD4T} <a href="{$CARD4W}" target="_blank" class="ui mini blue button right floated">Website</a></div>
+            <!-- Card 4 -->
+            <div class="sixteen wide mobile eight wide tablet eight wide computer column">
+              <div class="ui segment" style="height:100%;">
+                <div class="ui header">{$CARD4T} <a href="{$CARD4W}" target="_blank" class="ui mini blue button right floated">Website</a></div>
                 <div class="ui slide masked reveal image">
                   <img src="{$CARD4V}" class="visible content" style="border-radius:2%;">
-                  <img src="{$CARD4H}" class="hidden content"  style="border-radius:2%;">
-                </div> 
-             </div>
-         </div>
+                  <img src="{$CARD4H}" class="hidden content" style="border-radius:2%;">
+                </div>
+              </div>
+            </div>
 
-       </div>
-      </div>    
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-            {/if}
+  </div>           {/if}
 
         </div>
         {if count($WIDGETS_RIGHT)}

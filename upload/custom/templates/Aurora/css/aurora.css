@@ -20,6 +20,12 @@
     background: transparent;
 }
 
+    @media (max-width: 767px) { 
+      .ui.grid .column {
+        width: 100% !important; 
+      }
+    }
+
 @media only screen and (max-width: 768px) {
     #mobnavbar {
         display: block !important;
@@ -367,11 +373,19 @@ body.dark .cf-home-title {
     font-weight: 500;
 }
 
-/* Fix Widget Label in Dark Mode */
+/* Theme fix on darkmode */
 
 body.dark .ui.fluid.centered.label {
     background: #303030;
     border-color: #303030;
     color: #fff;
     cursor: default;
+}
+
+body.dark .ui.pointing.menu:not(.inverted) .item {
+    color: #fff;
+}
+body.dark .ui.pointing.menu {
+    background: #282828;
+    border: 1px solid #282828;
 }

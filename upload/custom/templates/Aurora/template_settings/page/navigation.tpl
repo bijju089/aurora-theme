@@ -1,7 +1,6 @@
-<div class="card mb-3">
+<div class="card mb-3" style="border: 1px solid #ececec">
     <div class="card-body">
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-
             <a class="nav-link {if empty($TPL_NAME_SESSION) or $TPL_NAME_SESSION eq 'home'}active{/if}"
                 id="v-pills-options-tab" data-toggle="pill" href="#v-pills-home" role="tab"
                 aria-controls="v-pills-home" aria-selected="true"><i class="fa-solid fa-home"></i> {$HOME_PAGE}</a>
@@ -17,6 +16,10 @@
             <a class="nav-link {if $TPL_NAME_SESSION eq 'connections'}active{/if}" id="v-pills-connections-tab"
                 data-toggle="pill" href="#v-pills-connections" role="tab" aria-controls="v-pills-connections"
                 aria-selected="false"><i class="fa-solid fa-signal"></i> {$CONNECTIONS_PAGE}</a>
+
+            <a class="nav-link {if $TPL_NAME_SESSION eq 'addons'}active{/if}" id="v-pills-addons-tab"
+                data-toggle="pill" href="#v-pills-addons" role="tab" aria-controls="v-pills-addons"
+                aria-selected="false"><i class="fa-solid fa-puzzle-piece"></i> {$ADDONS_PAGE}</a>
 
             <a class="nav-link {if $TPL_NAME_SESSION eq 'cardcontent'}active{/if}" id="v-pills-cardcontent-tab"
                 data-toggle="pill" href="#v-pills-cardcontent" role="tab" aria-controls="v-pills-cardcontent"
@@ -43,7 +46,7 @@
                     class="fa-solid fa-globe"></i>
                 {$SEO_PAGE}</a>
 
-            <a class="nav-link" href="https://cxstudios.xyz/discord" target="_blank"><i
+            <a class="nav-link" href="https://cxstudios.org/discord" target="_blank"><i
                     class="fa-solid fa-life-ring"></i>
                 {$SUPPORT_PAGE}</a>
             <style>

@@ -151,6 +151,7 @@ $.getJSON(url, function(r) {
     }
 });
     </script>
+{include file='aurora/addons.tpl'}
 {if isset($CUSTOMJS)}
 <script>
 {$CUSTOMJS}

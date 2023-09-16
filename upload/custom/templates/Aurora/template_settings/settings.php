@@ -45,6 +45,7 @@ $smarty->assign([
         'THEME_PAGE' => AuroraUtil::getLanguage('navigation', 'theme_page'),
         'NAVBAR_PAGE' => AuroraUtil::getLanguage('navigation', 'navbar_page'),
         'CONNECTIONS_PAGE' => AuroraUtil::getLanguage('navigation', 'connections_page'),
+        'ADDONS_PAGE' => AuroraUtil::getLanguage('navigation', 'addons_page'),
         'CARDCONTENT_PAGE' => AuroraUtil::getLanguage('navigation', 'cardcontent_page'),
         'FOOTER_PAGE' => AuroraUtil::getLanguage('navigation', 'footer_page'),
         'PORTAL_PAGE' => AuroraUtil::getLanguage('navigation', 'portal_page'),
@@ -55,9 +56,11 @@ $smarty->assign([
 
     // Home Page
         'REVIEW_INFO' => AuroraUtil::getLanguage('home', 'review_info', [
-           'riLinkStart' => '<a href=\'https://cxstudios.xyz/products/aurora\' target=\'_blank\'>',
+           'riLinkStart' => '<a href=\'https://cxstudios.org/products/aurora\' target=\'_blank\'>',
            'riLinkEnd' => '</a>'
         ]),
+        'UPDATE_AVAILABLE' => AuroraUtil::getLanguage('home', 'update_available'),
+        'DOWNLOAD_UPDATE' => AuroraUtil::getLanguage('home', 'download_update'),
 
     // Theme Options
         'SHADOWEFFECTS_LABEL' => AuroraUtil::getLanguage('theme', 'shadoweffects_label'),
@@ -108,6 +111,17 @@ $smarty->assign([
             'SIMPLE_LABEL' => AuroraUtil::getLanguage('connections', 'simple_label'),
             'ADVANCED_LABEL' => AuroraUtil::getLanguage('connections', 'advanced_label'),
 
+    // Addons
+        // WidgetBot
+            'WIDGETBOT_INFO' => AuroraUtil::getLanguage('addons', 'widgetbot_info', [
+               'wbLinkStart' => '<a href=\'https://docs.widgetbot.io/embed/html-embed/tutorial/#setting-your-server\' target=\'_blank\'>',
+               'wbLinkEnd' => '</a>'
+            ]),
+            'SERVERID_LABEL' => AuroraUtil::getLanguage('addons', 'serverid_label'),
+            'SERVERID_INFO_LABEL' => AuroraUtil::getLanguage('addons', 'serverid_info_label'),
+            'CHANNELID_LABEL' => AuroraUtil::getLanguage('addons', 'channelid_label'),
+            'CHANNELID_INFO_LABEL' => AuroraUtil::getLanguage('addons', 'channelid_info_label'),
+
     // Card
         'CARD_TITLE' => AuroraUtil::getLanguage('card', 'card_title'),
         'CARD_LINK' => AuroraUtil::getLanguage('card', 'card_link'),
@@ -128,7 +142,7 @@ $smarty->assign([
 
     // Portal
         'PORTAL_INFO' => AuroraUtil::getLanguage('portal', 'portal_info', [
-           'piLinkStart' => '<a href=\'https://cxstudios.xyz/wiki/portal\' target=\'_blank\'>',
+           'piLinkStart' => '<a href=\'https://cxstudios.org/wiki/portal\' target=\'_blank\'>',
            'piLinkEnd' => '</a>'
         ]),
         'PORTAL_NOT_SET' => AuroraUtil::getLanguage('portal', 'portal_not_set'),
