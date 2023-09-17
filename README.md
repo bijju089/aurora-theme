@@ -1,5 +1,5 @@
 # Aurora NamelessMC Theme
-A perfect theme for [NamelessMC](https://namelessmc.com/)
+A perfect theme for [NamelessMC](https://namelessmc.com/) <br>
 Made using FomanticUI Framework.
 
 ## Getting Started
