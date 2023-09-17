@@ -1,6 +1,6 @@
 # Aurora NamelessMC Theme
-Aurora is new opensource theme made using fomantic ui for NamelessMC.
-> Visit our wiki for theme configuring https://wiki.cxstudios.xyz/docs/aurora
+A perfect theme for [NamelessMC](https://namelessmc.com/)
+Made using FomanticUI Framework.
 
 ## Getting Started
 
