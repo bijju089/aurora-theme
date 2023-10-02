@@ -1,6 +1,8 @@
 </div>
 </div>
 
+
+
 {if $FOOTERSTYLE eq '0'}
  <div class="ui inverted vertical footer segment" id="footer">
   <div class="ui container">

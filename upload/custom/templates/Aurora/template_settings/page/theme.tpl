@@ -15,7 +15,6 @@
                     <option value="1" {if $SHADOWEFFECTS eq '1' } selected{/if}>{$DISABLED}</option>
                 </select>
             </div>
-
             <div class="form-group">
                 <input type="hidden" name="token" value="{$TOKEN}">
                 <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i>

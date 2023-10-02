@@ -61,12 +61,19 @@ $smarty->assign([
         ]),
         'UPDATE_AVAILABLE' => AuroraUtil::getLanguage('home', 'update_available'),
         'DOWNLOAD_UPDATE' => AuroraUtil::getLanguage('home', 'download_update'),
+        'REQUIRE_SUPPORT' => AuroraUtil::getLanguage('home', 'require_support'),
+        'REQUIRE_SUPPORT_DESC' => AuroraUtil::getLanguage('home', 'require_support_desc'),
+        'JOIN_DISCORD' => AuroraUtil::getLanguage('home', 'join_discord'),
+        'RATE_AURORA' => AuroraUtil::getLanguage('home', 'rate_theme'),
+        'RATE_AURORA_DESC' => AuroraUtil::getLanguage('home', 'rate_theme_desc'),
+        'RATE_NOW' => AuroraUtil::getLanguage('home', 'rate_now'),
 
     // Theme Options
         'SHADOWEFFECTS_LABEL' => AuroraUtil::getLanguage('theme', 'shadoweffects_label'),
         'SHADOWEFFECTS_INFO_LABEL' => AuroraUtil::getLanguage('theme', 'shadoweffects_info_label'),
 
     // Navbar
+        'MODERNNAV_INFO' => AuroraUtil::getLanguage('navbar', 'modernnav_info'),
         'NAVBARLOGO_LABEL' => AuroraUtil::getLanguage('navbar', 'navbarlogo_label'),
         'NAVBARLOGO_INFO_LABEL' => AuroraUtil::getLanguage('navbar', 'navbarlogo_info_label'),
         'NAVBARBANNER_LABEL' => AuroraUtil::getLanguage('navbar', 'navbarbanner_label'),
@@ -82,8 +89,10 @@ $smarty->assign([
         'NAVBARSTYLE_INFO_LABEL' => AuroraUtil::getLanguage('navbar', 'navbarstyle_info_label'),
         'NAVBARELEGANT_LABEL' => AuroraUtil::getLanguage('navbar', 'navbarelegant_label'),
         'NAVBARDYNAMIC_LABEL' => AuroraUtil::getLanguage('navbar', 'navbardynamic_label'),
+        'NAVBARMODERN_LABEL' => AuroraUtil::getLanguage('navbar', 'navbarmodern_label'),
         'NAVBARMINIMAL_LABEL' => AuroraUtil::getLanguage('navbar', 'navbarminimal_label'),
         'NAVBARCLEAN_LABEL' => AuroraUtil::getLanguage('navbar', 'navbarclean_label'),
+        'BTNCOLOUR_LABEL' => AuroraUtil::getLanguage('navbar', 'btncolour_label'),
         'UPLOAD_IMAGE' => AuroraUtil::getLanguage('navbar', 'upload_image'),
         'UPLOAD_BANNER' => AuroraUtil::getLanguage('navbar', 'upload_banner'),
         'SOCIAL_LINK' => AuroraUtil::getLanguage('navbar', 'social_link'),

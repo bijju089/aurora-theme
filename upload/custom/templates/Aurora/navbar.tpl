@@ -22,6 +22,9 @@
 
 <div class="pusher">
     <div id="wrapper">
+{if $NAVBARSTYLE eq '2'}
+{include file='aurora/modern_navbar.tpl'}
+{else}
         <div class="ui secondary {if $NAVBARTYPE eq '0'} pointing {/if} menu" style="height: 55px;" id="navbar">
             <div class="ui container">
               {if $NAVBARSTYLE eq '0'}{if isset($LOGO_IMAGE)}<img class="ui small image" style="max-width:80px;"src="{$LOGO_IMAGE}" id="pcnavbar"> {else} <h2>{$SITE_NAME} </h2> {/if}{/if}
@@ -173,6 +176,7 @@
         </div>
     {/if}
 </div>
+{/if}
 {/if}
 <div class="ui container">
     {if $WELCOMESECTION eq '0' && !isset($LOGGED_IN_USER)}

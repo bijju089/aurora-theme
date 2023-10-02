@@ -46,9 +46,11 @@
                     class="fa-solid fa-globe"></i>
                 {$SEO_PAGE}</a>
 
-            <a class="nav-link" href="https://cxstudios.org/discord" target="_blank"><i
-                    class="fa-solid fa-life-ring"></i>
-                {$SUPPORT_PAGE}</a>
+            <a class="nav-link {if $TPL_NAME_SESSION eq 'about'}active{/if}" id="v-pills-about-tab" data-toggle="pill"
+                href="#v-pills-about" role="tab" aria-controls="v-pills-about" aria-selected="false"><i 
+                   class="fa-solid fa-circle-info"></i>                
+                {$ABOUT}</a>
+
             <style>
                 .nav-link {
                     color: #979797;

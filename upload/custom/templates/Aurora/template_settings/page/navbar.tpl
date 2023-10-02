@@ -12,7 +12,7 @@
                     </span></label>
                       <a href="{$SITE_HOME}panel/core/images/" class="btn btn-default w-100"><i class="fa-solid fa-arrow-up-right-from-square"></i></i>
                     {$UPLOAD_IMAGE}</a>
-             </div>
+    </div>
             <div class="form-group">
                 <label for="navbarLogo">{$NAVBARBANNER_LABEL} <span class="badge badge-info">
                         <i class="fas fa-question-circle" data-container="body" data-toggle="popover"
@@ -22,7 +22,6 @@
                       <a href="{$SITE_HOME}panel/core/images/" class="btn btn-default w-100"><i class="fa-solid fa-arrow-up-right-from-square"></i></i>
                     {$UPLOAD_BANNER}</a>
              </div>
-
             <div class="form-group">
                 <label for="navbarType">{$NAVBARTYPE_LABEL} <span class="badge badge-info">
                         <i class="fas fa-question-circle" data-container="body" data-toggle="popover"
@@ -34,6 +33,13 @@
                     <option value="1" {if $NAVBARTYPE eq '1' } selected{/if}>{$NAVBARCLEAN_LABEL}</option>
                 </select>
             </div>
+{if $NAVBARSTYLE eq '2'}
+            <div class="form-group">
+                <div class="alert alert-info" role="info">
+                 {$MODERNNAV_INFO}
+                 </div>            
+            </div>
+{/if}
             <div class="form-group">
                 <label for="navbarStyle">{$NAVBARSTYLE_LABEL} <span class="badge badge-info">
                         <i class="fas fa-question-circle" data-container="body" data-toggle="popover"
@@ -43,8 +49,16 @@
                 <select id="inputNavbarStyle" class="form-control mr-sm-2" name="navbarStyle">
                     <option value="0" {if $NAVBARSTYLE eq '0' } selected{/if}>{$NAVBARELEGANT_LABEL}</option>
                     <option value="1" {if $NAVBARSTYLE eq '1' } selected{/if}>{$NAVBARDYNAMIC_LABEL}</option>
+                    <option value="2" {if $NAVBARSTYLE eq '2' } selected{/if}>{$NAVBARMODERN_LABEL}</option>
                 </select>
             </div>
+              {if $NAVBARSTYLE eq '2'}
+                <div class="form-group">
+                <label for="btnColour">{$BTNCOLOUR_LABEL}</label>
+                    <input type="text" class="form-control" id="inputBtnColour" name="btnColour"
+                        placeholder="Enter Hex Value" value="{$BTNCOLOUR}">
+                </div>
+               {/if}
             <div class="form-group">
                 <input type="hidden" name="token" value="{$TOKEN}">
                 <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i>
@@ -72,12 +86,12 @@
                     <input type="text" class="form-control" id="inputSocialLink4" name="socialLink4"
                         placeholder="Facebook Link" value="{$SOCIALLINK4}">
                 </div>
-            {/if}
             <div class="form-group">
                 <input type="hidden" name="token" value="{$TOKEN}">
                 <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i>
                     {$SUBMIT}</button>
             </div>
+            {/if}
         </form>
     </div>
 </div>

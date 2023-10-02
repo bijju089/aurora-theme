@@ -1,10 +1,12 @@
 <?php
 
-/**
+/*
  * Contains misc utility methods.
- *
+ * Special thanks to Vertisan
+ */
+/*
  * Aurora Template
- * @version 0.6
+ * @version 0.7
  * @license MIT
  */
 
@@ -96,11 +98,7 @@ class AuroraUtil
 
         $settings_data = [
             'darkMode' => 0,
-            'colorsStyle' => 0,
-            'primaryColor' => '#dc3545',
-            'navbarColor' => '#000000',
-            'footerColor' => '#000000',
-            'outlineColor' => '#000000',
+            'btnColour' => '#dc3545',
             'navbarType' => 0,
             'navbarStyle' => 0,
             'discordView' => 1,

@@ -52,24 +52,23 @@ value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
             </style>
              {/if}
 <style>
-    {if $NEW_SCROLLBAR eq '0' }
+::-webkit-scrollbar {
+    width: 7px;
+}
 
-        ::-webkit-scrollbar {
-            width: 6px;
-            background-color: #f3f6fa;
-        }
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+}
 
-        ::-webkit-scrollbar-thumb {
-            background: #d4d4d5;
-            border-radius: 10px;
-        }
+::-webkit-scrollbar-thumb:hover {
+    background: #333;
+}
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: #c3c4c6;
-        }
+::-webkit-scrollbar-track {
+    background: #ddd;
+}
 
-
-    {/if}
 </style>
 {include file='aurora/theme.tpl'}
 

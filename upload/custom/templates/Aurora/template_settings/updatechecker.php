@@ -2,7 +2,7 @@
 /*
  * Aurora Template
  * Made by BijjuXD
- * @version 0.6
+ * @version 0.7
  * @license MIT
  */
 

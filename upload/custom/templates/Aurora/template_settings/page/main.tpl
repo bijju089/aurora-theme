@@ -53,6 +53,10 @@
                 role="tabpanel" aria-labelledby="v-pills-seo-tab">
                 {include file="{$TPL_PATH}seo.tpl"}
             </div>
+            <div class="tab-pane fade {if $TPL_NAME_SESSION eq 'about'}show active{/if}" id="v-pills-about"
+                role="tabpanel" aria-labelledby="v-pills-about-tab">
+                {include file="{$TPL_PATH}about.tpl"}
+            </div>
         </div>
     </div>
 </div>

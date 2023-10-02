@@ -36,6 +36,14 @@
     }
 }
 
+.ui.vertical.animated.button {
+    background: none;
+    border: none;
+    color: #fff; 
+    cursor: pointer;
+    padding: 0;
+    text-align: center;
+}
 /*
  *  [ GHOST MODULE ]
  */

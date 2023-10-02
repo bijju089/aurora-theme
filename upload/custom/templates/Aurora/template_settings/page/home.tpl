@@ -9,6 +9,7 @@
                  {$REVIEW_INFO}
                  </div>            
             </div>
+
 {if $updateAvailable}
 <div class="card shadow mb-4">
                                 <div class="card-header bg-danger py-3 d-flex flex-row align-items-center justify-content-between">
@@ -92,7 +93,24 @@
         </div>
     </div>
 </div>
-
+  <div class="col-sm-6">
+    <div class="card border-left-primary shadow h-100 py-2">
+      <div class="card-body">
+        <h5 class="card-title">{$REQUIRE_SUPPORT}</h5>
+        <p class="card-text">{$REQUIRE_SUPPORT_DESC}</p>
+        <a href="https://cxstudios.org/discord" class="btn btn-primary">{$JOIN_DISCORD}</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card border-left-primary shadow h-100 py-2">
+      <div class="card-body">
+        <h5 class="card-title">{$RATE_AURORA}</h5>
+        <p class="card-text">{$RATE_AURORA_DESC}</p>
+        <a href="https://cxstudios.org/aurora-theme" class="btn btn-primary">{$RATE_NOW}</a>
+      </div>
+    </div>
+  </div>
 </div>
         </form>
     </div>

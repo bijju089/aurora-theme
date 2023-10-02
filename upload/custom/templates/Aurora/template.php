@@ -29,8 +29,8 @@ class Aurora_Template extends TemplateBase {
         $template = [
             'name' => 'Aurora',
             'version' => '0.6',
-            'nl_version' => '2.1.1',
-            'author' => '<a href="https://cxstudios.xyz/" target="_blank">BijjuXD</a>',
+            'nl_version' => '2.1.2',
+            'author' => '<a href="https://cxstudios.org/" target="_blank">BijjuXD</a>',
         ];
 
         $template['path'] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/' . $template['name'] . '/';
@@ -76,7 +76,7 @@ class Aurora_Template extends TemplateBase {
         $smarty->assign([
             'CLICK_TO_JOIN' => AuroraUtil::getLanguage('frontend', 'click_to_join'),
             'MEMBERS_ONLINE' => AuroraUtil::getLanguage('frontend', 'members_online'),
-            'CLICK_TO_COPY' => AuroraUtil::getLanguage('general', 'click_to_copy_tooltip'),
+            'CLICK_TO_COPY' => AuroraUtil::getLanguage('frontend', 'click_to_copy'),
             'PLAYERS_ONLINE' => AuroraUtil::getLanguage('frontend', 'players_online'),
             'AURORA_VER' => AuroraUtil::getLanguage('frontend', 'template_version', [
                'version' => '' . $template["version"] . ''
@@ -161,7 +161,7 @@ class Aurora_Template extends TemplateBase {
             $this->_template['path'] . 'js/core/core.js?v=203' => [],
             $this->_template['path'] . 'js/core/user.js' => [],
             $this->_template['path'] . 'js/core/pages.js?v=203' => [],
-            $this->_template['path'] . 'js/portal/firefly.js' => [],
+
         ]);
 
         foreach ($this->_pages->getAjaxScripts() as $script) {
