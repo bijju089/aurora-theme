@@ -44,6 +44,16 @@
     padding: 0;
     text-align: center;
 }
+
+.ui.aurora.navbar.button {
+    background: none;
+    border: none;
+    color: #fff; 
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+}
+
 /*
  *  [ GHOST MODULE ]
  */
