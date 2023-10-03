@@ -1,7 +1,10 @@
+{if $MINECRAFTVIEW eq '1'}
+{* Necessary for Copy Minecraft Server IP Function *}    
+<span id="ip" style="visibility:hidden;">{$MINECRAFTIP}{if $MINECRAFTPORT != '25565'}:{$MINECRAFTPORT}{/if}</span>
+{/if}
+
 </div>
 </div>
-
-
 
 {if $FOOTERSTYLE eq '0'}
  <div class="ui inverted vertical footer segment" id="footer">
