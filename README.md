@@ -15,9 +15,10 @@ Made using FomanticUI Framework.
 - Member List
 - Store Module
 - Resources Module
--  <br>
+- Ghost Module <br>
 
-**How to add Module support**:
+**How to add Module support**: <br>
+*We recommend you to create Issue*
 - Instead of uploading module files to /DefaultRevamp/ folder, upload it to /Aurora folder
 > We'll appreciate if you help us adding module support by cloning this repo
 
@@ -25,7 +26,7 @@ Made using FomanticUI Framework.
 - English UK (100%)
 ### What you'll need
 
-- [NamelessMC](https://namelessmc.com/download/) v2.1.1
+- [NamelessMC](https://namelessmc.com/download/) v2.1.2
   - We always recommend you to use latest version of namelessmc.
 - Latest version of browser (Internet Explorer not supported)
 
@@ -33,4 +34,4 @@ Made using FomanticUI Framework.
 Help to the development of Aurora theme by Forking this repo and Contributing back!
 
 ## Community Support
-Feel free to join our [discord](https://cxstudios.xyz/discord) server for template support.
+Feel free to join our [discord](https://cxstudios.org/discord) server for template support.
