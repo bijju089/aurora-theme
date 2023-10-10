@@ -13,6 +13,30 @@
                       <a href="{$SITE_HOME}panel/core/images/" class="btn btn-default w-100"><i class="fa-solid fa-arrow-up-right-from-square"></i></i>
                     {$UPLOAD_IMAGE}</a>
     </div>
+<div class="form-group dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Logo Settings
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<h3 class="text-center">More Settings</h3>
+    <div class="form-group">
+      <input type="text" class="form-control" id="inputLogoHeight" name="logoHeight" placeholder="Logo Height (Ex: 20)" value="{$LOGOHEIGHT}">
+    </div>
+{if $NAVBARSTYLE eq '0' }
+    <div class="form-group">
+      <input type="text" class="form-control" id="inputLogoWidth" name="logoWidth" placeholder="Logo Width (Ex: 20)" value="{$LOGOWIDTH}">
+    </div>
+{/if}
+<hr>
+            <div class="form-group">
+                <input type="hidden" name="token" value="{$TOKEN}">
+                <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i>
+                    {$SUBMIT}</button>
+            </div>
+
+  </div>
+</div>
+
             <div class="form-group">
                 <label for="navbarLogo">{$NAVBARBANNER_LABEL} <span class="badge badge-info">
                         <i class="fas fa-question-circle" data-container="body" data-toggle="popover"

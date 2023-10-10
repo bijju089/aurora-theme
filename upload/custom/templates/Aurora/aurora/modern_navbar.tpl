@@ -130,7 +130,7 @@
     {/if}
     <div class="column" style="text-align: center;">
         <div class="ui medium image">
-            <img src="{$LOGO_IMAGE}" style="cursor:pointer; display: unset; max-width: 100%; height: auto;">
+            <img src="{$LOGO_IMAGE}" style="cursor:pointer; display: unset; max-width: 100%; height: {if isset ($LOGOHEIGHT)}{$LOGOHEIGHT}px{else}auto{/if};">
         </div>
     </div>
     {if $MINECRAFTVIEW eq '1'}

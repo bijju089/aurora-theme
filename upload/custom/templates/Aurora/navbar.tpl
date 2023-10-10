@@ -27,7 +27,7 @@
 {else}
         <div class="ui secondary {if $NAVBARTYPE eq '0'} pointing {/if} menu" style="height: 55px;" id="navbar">
             <div class="ui container">
-              {if $NAVBARSTYLE eq '0'}{if isset($LOGO_IMAGE)}<img class="ui small image" style="max-width:80px;"src="{$LOGO_IMAGE}" id="pcnavbar"> {else} <h2>{$SITE_NAME} </h2> {/if}{/if}
+              {if $NAVBARSTYLE eq '0'}{if isset($LOGO_IMAGE)}<img class="ui small image" style="width:{$LOGOWIDTH}px;"src="{$LOGO_IMAGE}" id="pcnavbar">&nbsp; {else} <h2>{$SITE_NAME} </h2> {/if}{/if}
                 {foreach from=$NAV_LINKS key=name item=item}
                     {if isset($item.items)}
                         <div class="ui dropdown item">
@@ -159,7 +159,7 @@
     {/if}
     <div class="column" style="text-align: center;">
         <div class="ui medium image">
-            <img src="{$LOGO_IMAGE}" style="cursor:pointer; display: unset; max-width: 100%; height: auto;">
+            <img src="{$LOGO_IMAGE}" style="cursor:pointer; display: unset; max-width: 100%; height: {if isset ($LOGOHEIGHT)}{$LOGOHEIGHT}px{else}auto{/if};">
         </div>
     </div>
     {if $MINECRAFTVIEW eq '1'}

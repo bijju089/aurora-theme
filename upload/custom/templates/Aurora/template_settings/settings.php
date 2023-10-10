@@ -2,7 +2,7 @@
 /*
  *  Made by Samerton
  *  https://github.com/NamelessMC/Nameless/tree/v2/
- *  NamelessMC version 2.1.1
+ *  NamelessMC version 2.1.2
  *
  *  License: MIT
  *  Special thanks to Vertisan 

@@ -6,7 +6,7 @@
  */
 /*
  * Aurora Template
- * @version 0.7
+ * @version 0.8
  * @license MIT
  */
 
@@ -109,21 +109,21 @@ class AuroraUtil
             'minecraftPort' => 25565,
             'shadowEffects' => 0,
             'cardt' => 'Portfolio',
-            'cardw' => 'https://cxstudios.xyz/exampleproject',
+            'cardw' => 'https://cxstudios.org/exampleproject',
             'card1t' => 'My Project',
-            'card1w' => 'https://cxstudios.xyz/exampleproject',
+            'card1w' => 'https://cxstudios.org/exampleproject',
             'card1v' => 'https://i.imgur.com/nvWYgJY.png',
             'card1h' => 'https://i.imgur.com/9nZfJ0c.png',
             'card2t' => 'My Project',
-            'card2w' => 'https://cxstudios.xyz/exampleproject',
+            'card2w' => 'https://cxstudios.org/exampleproject',
             'card2v' => 'https://i.imgur.com/nvWYgJY.png',
             'card2h' => 'https://i.imgur.com/9nZfJ0c.png',
             'card3t' => 'My Project',
-            'card3w' => 'https://cxstudios.xyz/exampleproject',
+            'card3w' => 'https://cxstudios.org/exampleproject',
             'card3v' => 'https://i.imgur.com/nvWYgJY.png',
             'card3h' => 'https://i.imgur.com/9nZfJ0c.png',
             'card4t' => 'My Project',
-            'card4w' => 'https://cxstudios.xyz/exampleproject',
+            'card4w' => 'https://cxstudios.org/exampleproject',
             'card4v' => 'https://i.imgur.com/nvWYgJY.png',
             'card4h' => 'https://i.imgur.com/9nZfJ0c.png',
             'button1t' => 'Home',
@@ -153,7 +153,9 @@ class AuroraUtil
             'welcomeDescription' => 'To join our community, please authenticate.',
             'widgetBot' => 0,
             'serverID' => '299881420891881473',
-            'channelID' => '355719584830980096'
+            'channelID' => '355719584830980096',
+            'logoHeight' => '',
+            'logoWidth' => '40'
         ];
 
         foreach ($settings_data as $key => $value) {

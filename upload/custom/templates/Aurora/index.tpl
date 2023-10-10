@@ -96,8 +96,8 @@
               <div class="ui segment" style="height:100%;">
                 <div class="ui header">{$CARD1T} <a href="{$CARD1W}" target="_blank" class="ui mini blue button right floated">Website</a></div>
                 <div class="ui slide masked reveal image">
-                  <img src="{$CARD1V}" class="visible content" style="border-radius:2%;">
-                  <img src="{$CARD1H}" class="hidden content" style="border-radius:2%;">
+                  <img src="{$CARD1V}" class="visible content" style="border-radius:2%;" loading="lazy">
+                  <img src="{$CARD1H}" class="hidden content" style="border-radius:2%;" loading="lazy">
                 </div>
               </div>
             </div>
@@ -107,8 +107,8 @@
               <div class="ui segment" style="height:100%;">
                 <div class="ui header">{$CARD2T} <a href="{$CARD2W}" target="_blank" class="ui mini blue button right floated">Website</a></div>
                 <div class="ui slide masked reveal image">
-                  <img src="{$CARD2V}" class="visible content" style="border-radius:2%;">
-                  <img src="{$CARD2H}" class="hidden content" style="border-radius:2%;">
+                  <img src="{$CARD2V}" class="visible content" style="border-radius:2%;" loading="lazy">
+                  <img src="{$CARD2H}" class="hidden content" style="border-radius:2%;" loading="lazy">
                 </div>
               </div>
             </div>
@@ -118,8 +118,8 @@
               <div class="ui segment" style="height:100%;">
                 <div class="ui header">{$CARD3T} <a href="{$CARD3W}" target="_blank" class="ui mini blue button right floated">Website</a></div>
                 <div class="ui slide masked reveal image">
-                  <img src="{$CARD3V}" class="visible content" style="border-radius:2%;">
-                  <img src="{$CARD3H}" class="hidden content" style="border-radius:2%;">
+                  <img src="{$CARD3V}" class="visible content" style="border-radius:2%;" loading="lazy">
+                  <img src="{$CARD3H}" class="hidden content" style="border-radius:2%;" loading="lazy">
                 </div>
               </div>
             </div>
@@ -129,8 +129,8 @@
               <div class="ui segment" style="height:100%;">
                 <div class="ui header">{$CARD4T} <a href="{$CARD4W}" target="_blank" class="ui mini blue button right floated">Website</a></div>
                 <div class="ui slide masked reveal image">
-                  <img src="{$CARD4V}" class="visible content" style="border-radius:2%;">
-                  <img src="{$CARD4H}" class="hidden content" style="border-radius:2%;">
+                  <img src="{$CARD4V}" class="visible content" style="border-radius:2%;" loading="lazy">
+                  <img src="{$CARD4H}" class="hidden content" style="border-radius:2%;" loading="lazy">
                 </div>
               </div>
             </div>

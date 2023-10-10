@@ -2,7 +2,7 @@
 /*
  *    Made by Samerton
  *    https://github.com/NamelessMC/Nameless/
- *    NamelessMC version 2.1.1
+ *    NamelessMC version 2.1.2
  */
 /*
  *    Made by cxDEV | BijjuXD
@@ -28,7 +28,7 @@ class Aurora_Template extends TemplateBase {
     public function __construct($cache, $smarty, $language, $user, $pages) {
         $template = [
             'name' => 'Aurora',
-            'version' => '0.6',
+            'version' => '0.8',
             'nl_version' => '2.1.2',
             'author' => '<a href="https://cxstudios.org/" target="_blank">BijjuXD</a>',
         ];
