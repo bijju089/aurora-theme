@@ -1,6 +1,6 @@
 <!-- Home Page -->
 <div class="card mb-3">
-    <h3 class="card-header mb-3 text-center">Aurora Theme <span class="badge bg-primary easter-egg-trigger" data-toggle="modal" data-target="#easterEggModal" style="color:white;cursor:help;">BETA</span></h3>
+    <h3 class="card-header mb-3 text-center">Aurora Theme <span class="badge bg-primary easter-egg-trigger" data-toggle="modal" data-target="#easterEggModal" style="color:white;cursor:help;">v{$currentVersion}</span></h3>
     <div class="card-body">
         <form action="" method="POST">
             <input type="hidden" name="sel_btn_session" value="home" />
@@ -23,7 +23,7 @@
                                     <br>
                                     <b>{$updateDescription}</b>
                                     <hr>
-                                    <a href="{$downloadUrl}" class="btn btn-primary">{$DOWNLOAD_UPDATE}</a>
+                                    <a href="{$downloadUrl}" class="btn btn-danger">{$DOWNLOAD_UPDATE}</a>
                               </div>
                             </div>
 {/if}
@@ -107,7 +107,7 @@
       <div class="card-body">
         <h5 class="card-title">{$RATE_AURORA}</h5>
         <p class="card-text">{$RATE_AURORA_DESC}</p>
-        <a href="https://cxstudios.org/aurora-theme" class="btn btn-primary">{$RATE_NOW}</a>
+        <a href="https://namelessmc.com/resources/resource/223-aurora---free-namelessmc-template/" class="btn btn-primary">{$RATE_NOW}</a>
       </div>
     </div>
   </div>

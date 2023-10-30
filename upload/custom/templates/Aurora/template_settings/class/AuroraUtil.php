@@ -6,7 +6,6 @@
  */
 /*
  * Aurora Template
- * @version 0.8
  * @license MIT
  */
 

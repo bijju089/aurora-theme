@@ -41,7 +41,7 @@
         </div>
 <div class="ui breadcrumb">
   <a class="section">Resources</a>
-  <div class="divider"> > </div>
+  <div class="divider"></div>
   <div class="active section">{$CATEGORY_VALUE}</div>
 </div>
         <div class="ui row">

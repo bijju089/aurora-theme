@@ -1,3 +1,31 @@
+<div class="container">
+{if $updateRequired}
+<div class="alert alert-danger" role="alert">
+  <div class="alert-content">
+    <h4 class="alert-title"><i class="fas fa-exclamation-triangle"></i> {$AURORA_OUTDATED}</h4>
+    <p>{$AURORA_OUTDATED_INFO}</p>
+  </div>
+</div>
+{/if}
+
+  <div class="row justify-content-center">
+    <div class="btn-group" role="group">
+      <a href="https://www.cxstudios.org/wiki/aurora-theme/introduction" target="_blank" class="btn btn-info">
+        <i class="fas fa-book"></i> <span class="d-none d-md-inline">Wiki</span>
+      </a>
+      <a href="https://www.cxstudios.org/discord/" target="_blank" class="btn btn-primary">
+        <i class="fab fa-discord"></i> <span class="d-none d-md-inline">Discord</span>
+      </a>
+      <a href="https://www.cxstudios.org/youtube/" target="_blank" class="btn btn-danger">
+        <i class="fab fa-youtube"></i> <span class="d-none d-md-inline">YouTube</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
 <!-- Page Content -->
 <div class="row">
     <div class="col-sm-3">

@@ -39,6 +39,10 @@ $smarty->assign([
         'CHECK_AGAIN' => $language->get('admin', 'check_again'),
         'WARNING' => $language->get('general', 'warning'),
 
+    // Aurora Main
+        'AURORA_OUTDATED' => AuroraUtil::getLanguage('main', 'aurora_outdated'),
+        'AURORA_OUTDATED_INFO' => AuroraUtil::getLanguage('main', 'aurora_outdated_info'),
+
     // Navigation
         'NAVIGATION' => AuroraUtil::getLanguage('navigation', 'navigation'),
         'HOME_PAGE' => AuroraUtil::getLanguage('navigation', 'home_page'),
@@ -56,7 +60,7 @@ $smarty->assign([
 
     // Home Page
         'REVIEW_INFO' => AuroraUtil::getLanguage('home', 'review_info', [
-           'riLinkStart' => '<a href=\'https://cxstudios.org/products/aurora\' target=\'_blank\'>',
+           'riLinkStart' => '<a href=\'https://github.com/bijju089/aurora-theme\' target=\'_blank\'>',
            'riLinkEnd' => '</a>'
         ]),
         'UPDATE_AVAILABLE' => AuroraUtil::getLanguage('home', 'update_available'),

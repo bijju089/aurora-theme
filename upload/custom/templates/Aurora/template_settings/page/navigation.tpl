@@ -1,5 +1,6 @@
 <div class="card mb-3" style="border: 1px solid #ececec">
     <div class="card-body">
+    <div class="h3">Settings <hr></div>
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <a class="nav-link {if empty($TPL_NAME_SESSION) or $TPL_NAME_SESSION eq 'home'}active{/if}"
                 id="v-pills-options-tab" data-toggle="pill" href="#v-pills-home" role="tab"

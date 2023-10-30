@@ -2,7 +2,7 @@
 /*
  * Aurora Template
  * Made by BijjuXD
- * @version 0.7
+ * Update Checker File
  * @license MIT
  */
 
@@ -24,17 +24,23 @@ if ($updateInfo !== false) {
         $downloadUrl = $updateInfo['download_url'];
         $updateDescription = isset($updateInfo['description']) ? $updateInfo['description'] : "";
 
+        // Get the mandatory update version
+        $updatemandatory = isset($updateInfo['updatemandatory']) ? $updateInfo['updatemandatory'] : "";
+        $updateRequired = version_compare($currentVersion, $updatemandatory, '<');
         $updateAvailable = version_compare($currentVersion, $latestVersion, '<');
     } else {
         $updateAvailable = false;
+        $updateRequired = false;
     }
 } else {
     $updateAvailable = false;
+    $updateRequired = false;
 }
 
 // Assign Variables
 $smarty->assign([
     'updateAvailable' => $updateAvailable,
+    'updateRequired' => $updateRequired,
     'currentVersion' => $currentVersion,
     'latestVersion' => $latestVersion,
     'downloadUrl' => $downloadUrl,
