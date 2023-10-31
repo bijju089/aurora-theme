@@ -15,7 +15,10 @@ Made using FomanticUI Framework.
 - Member List
 - Store Module
 - Resources Module
-- Ghost Module <br>
+- Ghost Module
+- Suggestions Module
+- Vote Module
+- Newsletter Module <br>
 
 **How to add Module support**: <br>
 *We recommend you to create Issue*
