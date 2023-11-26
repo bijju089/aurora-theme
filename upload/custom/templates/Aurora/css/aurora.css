@@ -391,6 +391,11 @@ body.dark .cf-home-title {
     font-weight: 500;
 }
 
+.cf-full-post-content img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
 /* Theme fix on darkmode */
 
 body.dark .ui.fluid.centered.label {
