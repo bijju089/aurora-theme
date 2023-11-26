@@ -148,7 +148,6 @@
 var url = "https://api.minetools.eu/ping/{$MINECRAFTIP}{if $MINECRAFTPORT != '25565'}/{$MINECRAFTPORT}{/if}";
 $.getJSON(url, function(r) {
     if (r.error) {
-        $('h2').html('Server Offline');
         $('#minecraftplayers').html('Server Offline');
         return false;
     } else {
