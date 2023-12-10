@@ -18,7 +18,9 @@ Made using FomanticUI Framework.
 - Ghost Module
 - Suggestions Module
 - Vote Module
-- Newsletter Module <br>
+- Newsletter Module
+- Trophies Module
+- ChatBox Module <br>
 
 **How to add Module support**: <br>
 *We recommend you to create Issue*
