@@ -1,3 +1,11 @@
+{if $PRELOADERVIEW eq '1'}
+    <div class="preloader" id="preloader">
+        <div
+            class="ui active {if $PRELOADERSPEED eq 'normal'}{else}{$PRELOADERSPEED}{/if} {if $PRELOADERSTYLE eq 'normal'}{else}{$PRELOADERSTYLE}{/if} {$PRELOADERCOLOR} large inverted loader">
+        </div>
+        <h3 style="margin-top: 100px;"><span class="ui inverted {$PRELOADERCOLOR} text">{$PRELOADERTEXT}</span></h3>
+    </div>
+{/if}
 <div class="ui vertical inverted sidebar menu left" id="toc">
     <div class="item">
         <h3>{$SITE_NAME}</h3>

@@ -99,7 +99,7 @@ class AuroraUtil
             'darkMode' => 0,
             'btnColour' => '#dc3545',
             'navbarType' => 0,
-            'navbarStyle' => 0,
+            'navbarStyle' => 2,
             'discordView' => 1,
             'discordID' => 1002478941111599144,
             'minecraftView' => 1,
@@ -154,7 +154,12 @@ class AuroraUtil
             'serverID' => '299881420891881473',
             'channelID' => '355719584830980096',
             'logoHeight' => '',
-            'logoWidth' => '40'
+            'logoWidth' => '40',
+            'preloaderView' => 0,
+            'preloaderText' => 'Loading...',
+            'preloaderColor' => 'red',
+            'preloaderSpeed' => 'normal',
+            'preloaderStyle' => 'normal'
         ];
 
         foreach ($settings_data as $key => $value) {

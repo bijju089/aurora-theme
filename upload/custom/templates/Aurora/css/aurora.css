@@ -8,6 +8,23 @@
  *  [ HTML & BODY ]
  */
 
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+body.dark .preloader {
+    background-color: #333;
+}
+
+
 #wrapper>.ui.container {
     margin-top: 3rem;
 }
@@ -392,7 +409,6 @@ body.dark .cf-home-title {
 }
 
 .cf-full-post-content img {
-    max-height: 100%;
     max-width: 100%;
 }
 

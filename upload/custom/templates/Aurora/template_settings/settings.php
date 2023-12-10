@@ -42,6 +42,7 @@ $smarty->assign([
     // Aurora Main
         'AURORA_OUTDATED' => AuroraUtil::getLanguage('main', 'aurora_outdated'),
         'AURORA_OUTDATED_INFO' => AuroraUtil::getLanguage('main', 'aurora_outdated_info'),
+        'DEBUG_LABEL' => AuroraUtil::getLanguage('main', 'debug_label'),
 
     // Navigation
         'NAVIGATION' => AuroraUtil::getLanguage('navigation', 'navigation'),
@@ -75,6 +76,31 @@ $smarty->assign([
     // Theme Options
         'SHADOWEFFECTS_LABEL' => AuroraUtil::getLanguage('theme', 'shadoweffects_label'),
         'SHADOWEFFECTS_INFO_LABEL' => AuroraUtil::getLanguage('theme', 'shadoweffects_info_label'),
+        'PRELOADERVIEW_LABEL' => AuroraUtil::getLanguage('theme', 'preloaderview_label'),
+        'PRELOADERVIEW_INFO_LABEL' => AuroraUtil::getLanguage('theme', 'preloaderview_info_label'),
+        'PRELOADERTEXT_LABEL' => AuroraUtil::getLanguage('theme', 'preloadertext_label'),
+        'PRELOADERLOADING_LABEL' => AuroraUtil::getLanguage('theme', 'preloaderloading_label'),
+        'PRELOADERCOLOR_LABEL' => AuroraUtil::getLanguage('theme', 'preloadercolor_label'),
+        'PRELOADER_RED' => $language->get('general', 'red'),
+        'PRELOADER_ORANGE' => $language->get('general', 'orange'),
+        'PRELOADER_YELLOW' => $language->get('general', 'yellow'),
+        'PRELOADER_OLIVE' => $language->get('general', 'olive'),
+        'PRELOADER_GREEN' => $language->get('general', 'green'),
+        'PRELOADER_TEAL' => $language->get('general', 'teal'),
+        'PRELOADER_BLUE' => $language->get('general', 'blue'),
+        'PRELOADER_VIOLET' => $language->get('general', 'violet'),
+        'PRELOADER_PURPLE' => $language->get('general', 'purple'),
+        'PRELOADER_PINK' => $language->get('general', 'pink'),
+        'PRELOADER_BROWN' => $language->get('general', 'brown'),
+        'PRELOADER_GRAY' => $language->get('general', 'grey'),
+        'PRELOADER_BLACK' => AuroraUtil::getLanguage('theme', 'preloader_black'),
+        'PRELOADERSPEED_LABEL' => AuroraUtil::getLanguage('theme', 'preloaderspeed_label'),
+        'PRELOADER_SLOW' => AuroraUtil::getLanguage('theme', 'preloader_slow'),
+        'PRELOADER_NORMAL' => AuroraUtil::getLanguage('theme', 'preloader_normal'),
+        'PRELOADER_FAST' => AuroraUtil::getLanguage('theme', 'preloader_fast'),
+        'PRELOADERSTYLE_LABEL' => AuroraUtil::getLanguage('theme', 'preloaderstyle_label'),
+        'PRELOADER_DOUBLE' => AuroraUtil::getLanguage('theme', 'preloader_double'),
+        'PRELOADER_ELASTIC' => AuroraUtil::getLanguage('theme', 'preloader_elastic'),
 
     // Navbar
         'MODERNNAV_INFO' => AuroraUtil::getLanguage('navbar', 'modernnav_info'),

@@ -203,7 +203,17 @@ document.getElementById("dslink").addEventListener("click", function() {
         }
     {/if}
 </script>
-
+{if $PRELOADERVIEW eq '1'}
+<script>
+$(document).ready(function() {
+  $(window).on('load', function() {
+    $('#preloader').delay(500).fadeOut('slow', function() {
+      $(this).remove();
+    });
+  });
+});
+</script>
+{/if}
 {if isset($NEW_UPDATE) && ($NEW_UPDATE_URGENT != true)}
     <script src="{$TEMPLATE.path}/js/core/update.js"></script>
 {/if}
