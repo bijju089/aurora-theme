@@ -85,7 +85,7 @@
      <div class="center aligned">
         <span class="item">&copy; <strong>{$SITE_NAME}</strong> {'Y'|date}</span> |
         <span class="item">Powered By <a href="https://namelessmc.com">NamelessMC</a></span> <br>
-        <span class="item">Theming with <i class="fa-solid fa-heart fa-beat" style="color: #d90d0d;"></i> by <a href="https://cxstudios.xyz">cxSTUDIOS</a></span>
+        <span class="item">Theming with <i class="fa-solid fa-heart fa-beat" style="color: #d90d0d;"></i> by <a href="https://cxstudios.org">cxSTUDIOS</a></span>
      </div>
     <br>
    <div class="center aligned">
