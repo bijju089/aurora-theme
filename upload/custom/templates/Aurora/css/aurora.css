@@ -70,7 +70,15 @@ body.dark .preloader {
     padding: 5px;
     text-align: center;
 }
-
+/* 
+ * [ CARDS & SEGMENT ]
+ */
+.ui.segment {
+   border-radius: 10px;
+}
+.ui.card {
+   border-radius: 10px;
+}
 /*
  *  [ GHOST MODULE ]
  */
