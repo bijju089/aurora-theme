@@ -6,7 +6,7 @@ Made using FomanticUI Framework.
 
 1. Download latest version of **Aurora** from releases tab on github.
 2. Extract files inside of /upload/ to root directory of NamelessMC
-3. Login to your ACP and go to Layout > Templates.
+3. Login to your StaffCP (Gear Icon '⚙' at top) and go to Layout > Templates.
 4. Click on the Install button on right top of templates
 5. Now activate Aurora template and set it as default
 
