@@ -11,8 +11,8 @@ require_once(ROOT_PATH . '/custom/templates/Aurora/template.php');
 // Get Current Version of Aurora
 $currentVersion = $smarty->getTemplateVars('AURORA_VER'); 
 
-// URL to the version information JSON
-$versionInfoUrl = "https://www.cxstudios.org/api/updates/version.json";
+// ALT: https://api.bijjuxd.me/v1/aurora/get-version
+$versionInfoUrl = "https://api.cxstudios.org/v1/aurora/get-version";
 
 $updateInfo = @file_get_contents($versionInfoUrl);
 
