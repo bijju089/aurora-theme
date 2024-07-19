@@ -1,11 +1,11 @@
 <?php
 /*
- *    Made by Samerton
+ *    NamelessMC | Aurora Theme
  *    https://github.com/NamelessMC/Nameless/
  *    NamelessMC version 2.1.2
  */
 /*
- *    Made by cxDEV | BijjuXD
+ *    Made by BijjuXD
  *    https://github.com/bijju089/aurora-theme/
  *    Aurora Template
  */
@@ -28,9 +28,9 @@ class Aurora_Template extends TemplateBase {
     public function __construct($cache, $smarty, $language, $user, $pages) {
         $template = [
             'name' => 'Aurora',
-            'version' => '1.0',
+            'version' => '1.1',
             'nl_version' => '2.1.2',
-            'author' => '<a href="https://cxstudios.org/" target="_blank">BijjuXD</a>',
+            'author' => '<a href="https://bijjuxd.me/" target="_blank">BijjuXD</a> | <a href="https://cxstudios.org/" target="_blank">cxSTUDIOS</a>',
         ];
 
         $template['path'] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/' . $template['name'] . '/';
