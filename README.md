@@ -1,6 +1,31 @@
 # Aurora NamelessMC Theme
-A perfect theme for [NamelessMC](https://namelessmc.com/) <br>
-Made using FomanticUI Framework.
+<!-- Looks like you're using some text editors to view this file! We've made dedicated page for you to look at!
+     https://cxstudios.org/wiki -->
+
+A perfect theme for [NamelessMC](https://namelessmc.com/) <br><br>
+![Aurora](https://img.shields.io/badge/Aurora-FREE-yellow?style=for-the-badge) ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/cxstudios-llc/aurora-theme/total?style=for-the-badge) ![GitHub License](https://img.shields.io/github/license/cxstudios-llc/aurora-theme?style=for-the-badge) ![GitHub Release](https://img.shields.io/github/v/release/cxstudios-llc/aurora-theme?display_name=tag&style=for-the-badge)
+
+## Features
+
+* ⚙️ Options
+  * 🎨 Default Dark Mode
+  * ✨ Card Border Shadow
+  * ⭕ Preloader Options
+* 🧭 Navbar
+  * 🖼 Custom Logo in Middle
+      * Custom Logo Height
+  * 🟩 Navbar type
+  * 💰 "Store" button color
+  * 😶 Navbar style
+    * Elegant
+    * Dynamic
+    * Modern
+* 📶 Connections
+  * ⛏ Minecraft
+  * 📱 Discord
+* 🧩 Addons
+  * 🤖 [WidgetBot](https://widgetbot.io)
+
 
 ## Getting Started
 
