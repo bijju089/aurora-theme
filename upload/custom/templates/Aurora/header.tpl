@@ -12,8 +12,7 @@ value="{$PAGE_DESCRIPTION}"}{else}{assign var="PAGEDESCRIPTION" value=" "}{/if}
 value="{$PAGE_KEYWORDS}"}{else}{assign var="PAGEKEYWORDS" value=" "}{/if}
 <!DOCTYPE html>
 <html{$HTMLCLASS}{$HTMLLANG}{$HTMLRTL}>
-<!-------- Aurora Template by BijjuXD --------->
-<!---- https://github.com/cxstudios-llc/aurora-theme/ ---->
+<!-- Aurora v{$AURORA_VER} by cxSTUDIOS | https://github.com/bijju089/aurora-theme -->
     <head>
 
         <meta charset="{$METACHARSET}">
