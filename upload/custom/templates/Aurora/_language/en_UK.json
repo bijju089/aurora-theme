@@ -5,6 +5,7 @@
     "main/aurora_outdated_info": "Aurora's developers keep updating the template regularly. We add features, bug fixes and improve the template. Some updates are mandatory, and you should update to latest version from the Template overview.",
     "theme/shadoweffects_label": "Shadow Effects",
     "theme/shadoweffects_info_label": "Adds Shadow Effect to some cards and widgets, not visible on dark mode!",
+    "theme/darkmode_label": "Dark Mode",
     "theme/preloader_black": "Black",
     "theme/preloader_double": "Double",
     "theme/preloader_elastic": "Elastic",

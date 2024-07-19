@@ -96,15 +96,14 @@ class AuroraUtil
         }
 
         $settings_data = [
-            'darkMode' => 0,
             'btnColour' => '#dc3545',
             'navbarType' => 0,
             'navbarStyle' => 2,
             'discordView' => 1,
             'discordID' => 1002478941111599144,
             'minecraftView' => 1,
-            'minecraftDomain' => 'play.cubedcraft.com',
-            'minecraftIP' => 'play.cubedcraft.com',
+            'minecraftDomain' => 'play.obsidianmc.in',
+            'minecraftIP' => 'play.obsidianmc.in',
             'minecraftPort' => 25565,
             'shadowEffects' => 0,
             'cardt' => 'Portfolio',

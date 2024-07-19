@@ -57,12 +57,13 @@ class Aurora_Template extends TemplateBase {
         $cache->setCache('template_settings');
         $smartyDarkMode = false;
 
+
         if (defined('DARK_MODE') && DARK_MODE == '1') {
             $smartyDarkMode = true;
         }
 
         $smarty->assign([
-            'DEFAULT_REVAMP_DARK_MODE' => $smartyDarkMode
+            'AURORA_DARK_MODE' => $smartyDarkMode
         ]);
 
         $this->_template = $template;

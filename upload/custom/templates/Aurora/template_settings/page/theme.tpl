@@ -4,6 +4,13 @@
     <div class="card-body">
         <form action="" method="POST">
             <input type="hidden" name="sel_btn_session" value="theme" />
+              <div class="form-group">
+                <label for="inputDarkMode">{$DARKMODE_LABEL}</label>
+                 <select name="darkMode" class="form-control" id="inputDarkMode">
+                   <option value="0" {if $DARK_MODE_VALUE eq '0' } selected{/if}>{$DISABLED}</option>
+                   <option value="1" {if $DARK_MODE_VALUE eq '1' } selected{/if}>{$ENABLED}</option>
+                 </select>
+              </div>
             <div class="form-group">
                 <label for="shadowEffects">{$SHADOWEFFECTS_LABEL} <span class="badge badge-info">
                         <i class="fas fa-question-circle" data-container="body" data-toggle="popover"

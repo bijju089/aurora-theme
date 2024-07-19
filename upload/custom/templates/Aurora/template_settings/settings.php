@@ -76,6 +76,7 @@ $smarty->assign([
     // Theme Options
         'SHADOWEFFECTS_LABEL' => AuroraUtil::getLanguage('theme', 'shadoweffects_label'),
         'SHADOWEFFECTS_INFO_LABEL' => AuroraUtil::getLanguage('theme', 'shadoweffects_info_label'),
+        'DARKMODE_LABEL' => AuroraUtil::getLanguage('theme', 'darkmode_label'),
         'PRELOADERVIEW_LABEL' => AuroraUtil::getLanguage('theme', 'preloaderview_label'),
         'PRELOADERVIEW_INFO_LABEL' => AuroraUtil::getLanguage('theme', 'preloaderview_info_label'),
         'PRELOADERTEXT_LABEL' => AuroraUtil::getLanguage('theme', 'preloadertext_label'),
@@ -207,6 +208,20 @@ $smarty->assign([
 if (isset($_POST['sel_btn_session'])) {
     Session::flash('sel_btn_session', $_POST['sel_btn_session']);
 }
+if (Input::exists()) {
+    if (Token::check()) {
+        $cache->setCache('template_settings');
+
+        if (isset($_POST['darkMode'])) {
+            $cache->store('darkMode', $_POST['darkMode']);
+        }
+
+        Session::flash('staff', $language->get('admin', 'successfully_updated'));
+        Redirect::to(URL::build($_SESSION['last_page']));
+    } else {
+        $errors = [$language->get('general', 'invalid_token')];
+    }
+}
 
 if (!isset($_POST['sel_btn'])) {
     if (Input::exists()) {
@@ -227,6 +242,15 @@ if (!isset($_POST['sel_btn'])) {
     }
 }
 
+// Get values
+$cache->setCache('template_settings');
+if ($cache->isCached('darkMode')) {
+    $darkMode = $cache->retrieve('darkMode');
+} else {
+    $darkMode = '0';
+    $cache->store('darkMode', $darkMode);
+}
+
 if (Session::exists('staff'))
     $success = Session::flash('staff');
     $TPL_NAME_SESSION = '';
@@ -238,6 +262,9 @@ $smarty->assign([
     'TPL_NAME_SESSION' => $TPL_NAME_SESSION
 ]);
 
+$smarty->assign([
+    'DARK_MODE_VALUE' => $darkMode,
+]);
 
 if (isset($success))
     $smarty->assign([
