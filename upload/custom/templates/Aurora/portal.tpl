@@ -3,7 +3,7 @@
 
 	<div class="container" style="text-align: center;">
           <div class="ui large image" style="margin-top: 50px;">
-              <img src="{$LOGO_IMAGE}">
+              <img src="{$LOGO_IMAGE}" style="cursor:pointer; display: unset; max-width: 100%; height: {if isset ($LOGOHEIGHT)}{$LOGOHEIGHT}px{else}auto{/if};">
           </div>
 <div style="margin-top: 50px;">
   <a href="{$BUTTON1L}" style="width:120px;" class="ui inverted big button">
