@@ -1,6 +1,6 @@
 # Aurora NamelessMC Theme
 <!-- Looks like you're using some text editors to view this file! We've made dedicated page for you to look at!
-     https://cxstudios.org/wiki -->
+     https://cxstudios.in/wiki -->
 
 A perfect theme for [NamelessMC](https://namelessmc.com/) <br><br>
 ![Aurora](https://img.shields.io/badge/Aurora-FREE-yellow?style=for-the-badge) ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/cxstudios-llc/aurora-theme/total?style=for-the-badge) ![GitHub License](https://img.shields.io/github/license/cxstudios-llc/aurora-theme?style=for-the-badge) ![GitHub Release](https://img.shields.io/github/v/release/cxstudios-llc/aurora-theme?display_name=tag&style=for-the-badge)
@@ -60,8 +60,13 @@ A perfect theme for [NamelessMC](https://namelessmc.com/) <br><br>
   - We always recommend you to use latest version of namelessmc.
 - Latest version of browser (Internet Explorer not supported)
 
-## HELP THE DEVELOPMENT
-Help to the development of Aurora theme by Forking this repo and Contributing back!
+## Contribution
+If you make any changes or improvements to Aurora which you think would be beneficial to others, please consider making a pull request to merge your changes back into the main project.
+## License
+Aurora is licensed under the GNU General Public License v3.0. Please see [LICENSE](https://github.com/cxstudios-llc/aurora-theme/blob/main/LICENSE) for more info.
 
 ## Community Support
-Feel free to join our [discord](https://cxstudios.org/discord) server for template support.
+Feel free to join our [discord](https://cxstudios.in/discord) server for template support.
+## Special Thanks
+- All Aurora [contributors](https://github.com/cxstudios-llc/aurora-theme/graphs/contributors).
+- [Visual Studio Code](https://code.visualstudio.com/) & [Jetbrains](https://www.jetbrains.com/webstorm/).
