@@ -16,7 +16,7 @@
    <h1><i class="{$BUTTON4I}"></i></h1><h4>{$BUTTON4T}</h4></a>
 </div>
 <div style="margin-top: 50px;">
-<p style="color:grey;">&copy; {$SITE_NAME} 2023</p>
+<p style="color:grey;">&copy; {$SITE_NAME} {'Y'|date}</p>
 </div>
 </div>
 </body>
