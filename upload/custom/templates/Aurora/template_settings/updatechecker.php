@@ -12,7 +12,7 @@ require_once(ROOT_PATH . '/custom/templates/Aurora/template.php');
 $currentVersion = $smarty->getTemplateVars('AURORA_VER'); 
 
 // ALT: https://api.bijjuxd.me/v1/aurora/get-version
-$versionInfoUrl = "https://api.cxstudios.org/v1/aurora/get-version";
+$versionInfoUrl = "https://api.cxstudios.in/v1/aurora/get-version";
 
 $updateInfo = @file_get_contents($versionInfoUrl);
 
