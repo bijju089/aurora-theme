@@ -98,7 +98,7 @@
       <div class="card-body">
         <h5 class="card-title">{$REQUIRE_SUPPORT}</h5>
         <p class="card-text">{$REQUIRE_SUPPORT_DESC}</p>
-        <a href="https://cxstudios.org/discord" class="btn btn-primary">{$JOIN_DISCORD}</a>
+        <a href="https://cxstudios.in/discord" class="btn btn-primary">{$JOIN_DISCORD}</a>
       </div>
     </div>
   </div>
@@ -119,7 +119,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="easterEggModalLabel">You found it?</h5>
+        <h5 class="modal-title" id="easterEggModalLabel">Hey there!!</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -127,7 +127,7 @@
       <div class="modal-body">
         "Code is like humor. When you have to explain it, it's bad." 
          <br><small>- Cory House</small>
-       <br><img src="https://cxstudios.org/cdn/lmfao/codeisfun.gif" alt="Looks like this gif wasn't loaded lmfao." class="img-fluid">
+       <br><img src="https://cxstudios.in/cdn/lmfao/codeisfun.gif" alt="Looks like this gif wasn't loaded lmfao." class="img-fluid">
       </div>
     </div>
   </div>
