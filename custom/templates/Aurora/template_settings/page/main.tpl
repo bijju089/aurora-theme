@@ -10,13 +10,13 @@
 
   <div class="row justify-content-center">
     <div class="btn-group" role="group">
-      <a href="https://www.cxstudios.org/wiki/aurora-theme/introduction" target="_blank" class="btn btn-info">
+      <a href="https://cxstudios.in/wiki/aurora-theme/introduction" target="_blank" class="btn btn-info">
         <i class="fas fa-book"></i> <span class="d-none d-md-inline">Wiki</span>
       </a>
-      <a href="https://www.cxstudios.org/discord/" target="_blank" class="btn btn-primary">
+      <a href="https://cxstudios.in/discord/" target="_blank" class="btn btn-primary">
         <i class="fab fa-discord"></i> <span class="d-none d-md-inline">Discord</span>
       </a>
-      <a href="https://www.cxstudios.org/youtube/" target="_blank" class="btn btn-danger">
+      <a href="https://cxstudios.in/youtube/" target="_blank" class="btn btn-danger">
         <i class="fab fa-youtube"></i> <span class="d-none d-md-inline">YouTube</span>
       </a>
     </div>
