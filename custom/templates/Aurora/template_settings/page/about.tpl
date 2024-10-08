@@ -110,7 +110,7 @@
                                     <b>
                                     <i class="fa-solid fa-code" style="color: #003cf0;"></i> BijjuXD
                                     <br>
-                                    <i class="fa-solid fa-code-branch" style="color: #003cf0;"></i> MoonKid
+                                    <i class="fa-solid fa-code-branch" style="color: #003cf0;"></i> ColdfireDZN
                                     <br>
                                     <i class="fa-solid fa-code-branch" style="color: #003cf0;"></i> PadowYT2
                                     <br>
@@ -118,7 +118,7 @@
                                     <br>
                                     <i class="fa-solid fa-code-branch" style="color: #003cf0;"></i> Xemah
                                     <br>
-                                    <i class="fa-solid fa-code-branch" style="color: #003cf0;"></i> Coldfire
+                                    <i class="fa-solid fa-code-branch" style="color: #003cf0;"></i> CodingWithAnxiety 
                                     <hr>
                                     <a class="btn btn-primary" role="button" href="https://github.com/bijju089/aurora-theme/">Support the development on Github</a>
             </div>
