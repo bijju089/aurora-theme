@@ -28,7 +28,7 @@ class Aurora_Template extends TemplateBase {
     public function __construct($cache, $smarty, $language, $user, $pages) {
         $template = [
             'name' => 'Aurora',
-            'version' => '1.1',
+            'version' => '2.0',
             'nl_version' => '2.1.2',
             'author' => '<a href="https://bijjuxd.me/" target="_blank">BijjuXD</a> | <a href="https://cxstudios.org/" target="_blank">cxSTUDIOS</a>',
         ];
@@ -55,16 +55,6 @@ class Aurora_Template extends TemplateBase {
         $smarty->assign('FORUM_SPAM_WARNING_TITLE', $language->get('general', 'warning'));
 
         $cache->setCache('template_settings');
-        $smartyDarkMode = false;
-
-
-        if (defined('DARK_MODE') && DARK_MODE == '1') {
-            $smartyDarkMode = true;
-        }
-
-        $smarty->assign([
-            'AURORA_DARK_MODE' => $smartyDarkMode
-        ]);
 
         $this->_template = $template;
         $this->_language = $language;

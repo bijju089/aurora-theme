@@ -7,8 +7,15 @@
               <div class="form-group">
                 <label for="inputDarkMode">{$DARKMODE_LABEL}</label>
                  <select name="darkMode" class="form-control" id="inputDarkMode">
-                   <option value="0" {if $DARK_MODE_VALUE eq '0' } selected{/if}>{$DISABLED}</option>
-                   <option value="1" {if $DARK_MODE_VALUE eq '1' } selected{/if}>{$ENABLED}</option>
+                   <option value="0" {if $DARKMODE eq '0' } selected{/if}>{$DISABLED}</option>
+                   <option value="1" {if $DARKMODE eq '1' } selected{/if}>{$ENABLED}</option>
+                 </select>
+              </div>
+              <div class="form-group">
+                <label for="inputThemeSwitcher">{$THEMESWITCHER_LABEL}</label>
+                 <select name="themeSwitcher" class="form-control" id="inputthemeSwitcher">
+                   <option value="0" {if $THEMESWITCHER eq '0' } selected{/if}>{$DISABLED}</option>
+                   <option value="1" {if $THEMESWITCHER eq '1' } selected{/if}>{$ENABLED}</option>
                  </select>
               </div>
             <div class="form-group">

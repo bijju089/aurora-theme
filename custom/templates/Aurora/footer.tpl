@@ -27,22 +27,16 @@
                     {if $PAGE_LOAD_TIME}
                     <span class="item" id="page_load"></span>
                     {/if}
+					{if $THEMESWITCHER eq '1' }
                     <span class="item" id="darkmode">
-                        <input type="checkbox" class="darkmode-toggle" id="darkmode-toggle" onclick="toggleDarkLightMode()">
-                        <label for="darkmode-toggle" class="darkmode-toggle-label">
-                            <i class="fas fa-moon"></i>
-                            <i class="fas fa-sun"></i>
-                            <div class="darkmode-ball"></div>
-                        </label>
-
-                        <script type="text/javascript">
-                            if (document.body.classList.contains('dark')) {
-                                document.getElementById("darkmode-toggle").checked = true;
-                            } else {
-                                document.getElementById("darkmode-toggle").checked = false;
-                            }
-                        </script>
+                     <input type="checkbox" class="darkmode-toggle" id="darkmode-toggle" onclick="toggleDarkLightMode()">
+                      <label for="darkmode-toggle" class="darkmode-toggle-label">
+                       <i class="fas fa-moon"></i>
+                       <i class="fas fa-sun"></i>
+                       <div class="darkmode-ball"></div>
+                      </label>
                     </span>
+					{/if}
                     {if isset($AUTO_LANGUAGE)}
                         <a class="item" href="javascript:" onclick="toggleAutoLanguage()" id="auto-language"></a>
                     {/if}
@@ -174,15 +168,6 @@ document.getElementById("dslink").addEventListener("click", function() {
     }
   </script>
 <script type="text/javascript">
-    function toggleDarkLightMode() {
-        $.post("{$DARK_LIGHT_MODE_ACTION}", { token: "{$DARK_LIGHT_MODE_TOKEN}" })
-            .done(function () {
-                window.location.reload();
-            });
-
-        return false;
-    }
-
     {if isset($AUTO_LANGUAGE)}
         const autoLanguage = document.getElementById('auto-language');
         const autoLanguageValue = $.cookie('auto_language') ?? 'true';

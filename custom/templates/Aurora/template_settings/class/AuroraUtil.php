@@ -6,7 +6,7 @@
  */
 /*
  * Aurora Template
- * @license MIT
+ * Made by cxSTUDIOS | BijjuXD
  */
 
 class AuroraUtil
@@ -107,21 +107,21 @@ class AuroraUtil
             'minecraftPort' => 25565,
             'shadowEffects' => 0,
             'cardt' => 'Portfolio',
-            'cardw' => 'https://cxstudios.org/exampleproject',
+            'cardw' => 'https://cxstudios.in/exampleproject',
             'card1t' => 'My Project',
-            'card1w' => 'https://cxstudios.org/exampleproject',
+            'card1w' => 'https://cxstudios.in/exampleproject',
             'card1v' => 'https://i.imgur.com/nvWYgJY.png',
             'card1h' => 'https://i.imgur.com/9nZfJ0c.png',
             'card2t' => 'My Project',
-            'card2w' => 'https://cxstudios.org/exampleproject',
+            'card2w' => 'https://cxstudios.in/exampleproject',
             'card2v' => 'https://i.imgur.com/nvWYgJY.png',
             'card2h' => 'https://i.imgur.com/9nZfJ0c.png',
             'card3t' => 'My Project',
-            'card3w' => 'https://cxstudios.org/exampleproject',
+            'card3w' => 'https://cxstudios.in/exampleproject',
             'card3v' => 'https://i.imgur.com/nvWYgJY.png',
             'card3h' => 'https://i.imgur.com/9nZfJ0c.png',
             'card4t' => 'My Project',
-            'card4w' => 'https://cxstudios.org/exampleproject',
+            'card4w' => 'https://cxstudios.in/exampleproject',
             'card4v' => 'https://i.imgur.com/nvWYgJY.png',
             'card4h' => 'https://i.imgur.com/9nZfJ0c.png',
             'button1t' => 'Home',
@@ -158,7 +158,9 @@ class AuroraUtil
             'preloaderText' => 'Loading...',
             'preloaderColor' => 'red',
             'preloaderSpeed' => 'normal',
-            'preloaderStyle' => 'normal'
+            'preloaderStyle' => 'normal',
+            'darkMode' => 0,
+			'themeSwitcher' => 1
         ];
 
         foreach ($settings_data as $key => $value) {
