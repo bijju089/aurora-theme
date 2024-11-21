@@ -19,6 +19,9 @@
       <a href="https://cxstudios.in/youtube/" target="_blank" class="btn btn-danger">
         <i class="fab fa-youtube"></i> <span class="d-none d-md-inline">YouTube</span>
       </a>
+      <a href="https://cxstudios.in/donate/" target="_blank" class="btn" style="background-color:pink">
+        <i class="fas fa-heart"></i> <span class="d-none d-md-inline">Donate</span>
+      </a>
     </div>
   </div>
 </div>
