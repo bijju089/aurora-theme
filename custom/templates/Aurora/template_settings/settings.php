@@ -75,6 +75,7 @@ $smarty->assign([
 
     // Theme Options
         'SHADOWEFFECTS_LABEL' => AuroraUtil::getLanguage('theme', 'shadoweffects_label'),
+        'THEMESWITCHER_LABEL' => AuroraUtil::getLanguage('theme', 'themeswitcher_label'),
         'SHADOWEFFECTS_INFO_LABEL' => AuroraUtil::getLanguage('theme', 'shadoweffects_info_label'),
         'DARKMODE_LABEL' => AuroraUtil::getLanguage('theme', 'darkmode_label'),
         'PRELOADERVIEW_LABEL' => AuroraUtil::getLanguage('theme', 'preloaderview_label'),
@@ -182,7 +183,7 @@ $smarty->assign([
 
     // Portal
         'PORTAL_INFO' => AuroraUtil::getLanguage('portal', 'portal_info', [
-           'piLinkStart' => '<a href=\'https://cxstudios.org/wiki/portal\' target=\'_blank\'>',
+           'piLinkStart' => '<a href=\'https://cxstudios.in/wiki/portal\' target=\'_blank\'>',
            'piLinkEnd' => '</a>'
         ]),
         'PORTAL_NOT_SET' => AuroraUtil::getLanguage('portal', 'portal_not_set'),
@@ -208,20 +209,6 @@ $smarty->assign([
 if (isset($_POST['sel_btn_session'])) {
     Session::flash('sel_btn_session', $_POST['sel_btn_session']);
 }
-if (Input::exists()) {
-    if (Token::check()) {
-        $cache->setCache('template_settings');
-
-        if (isset($_POST['darkMode'])) {
-            $cache->store('darkMode', $_POST['darkMode']);
-        }
-
-        Session::flash('staff', $language->get('admin', 'successfully_updated'));
-        Redirect::to(URL::build($_SESSION['last_page']));
-    } else {
-        $errors = [$language->get('general', 'invalid_token')];
-    }
-}
 
 if (!isset($_POST['sel_btn'])) {
     if (Input::exists()) {
@@ -242,15 +229,6 @@ if (!isset($_POST['sel_btn'])) {
     }
 }
 
-// Get values
-$cache->setCache('template_settings');
-if ($cache->isCached('darkMode')) {
-    $darkMode = $cache->retrieve('darkMode');
-} else {
-    $darkMode = '0';
-    $cache->store('darkMode', $darkMode);
-}
-
 if (Session::exists('staff'))
     $success = Session::flash('staff');
     $TPL_NAME_SESSION = '';
@@ -262,9 +240,6 @@ $smarty->assign([
     'TPL_NAME_SESSION' => $TPL_NAME_SESSION
 ]);
 
-$smarty->assign([
-    'DARK_MODE_VALUE' => $darkMode,
-]);
 
 if (isset($success))
     $smarty->assign([
