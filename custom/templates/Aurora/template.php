@@ -30,7 +30,7 @@ class Aurora_Template extends TemplateBase {
             'name' => 'Aurora',
             'version' => '2.0',
             'nl_version' => '2.1.2',
-            'author' => '<a href="https://bijjuxd.me/" target="_blank">BijjuXD</a> | <a href="https://cxstudios.org/" target="_blank">cxSTUDIOS</a>',
+            'author' => '<a href="https://bijjuxd.me/" target="_blank">BijjuXD</a> | <a href="https://cxstudios.in/" target="_blank">cxSTUDIOS</a>',
         ];
 
         $template['path'] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/' . $template['name'] . '/';
