@@ -28,7 +28,7 @@ class Aurora_Template extends TemplateBase {
     public function __construct($cache, $smarty, $language, $user, $pages) {
         $template = [
             'name' => 'Aurora',
-            'version' => '2.0',
+            'version' => '1.1',
             'nl_version' => '2.1.2',
             'author' => '<a href="https://bijjuxd.me/" target="_blank">BijjuXD</a> | <a href="https://cxstudios.in/" target="_blank">cxSTUDIOS</a>',
         ];
