@@ -1,17 +1,8 @@
 <?php
 /*
- *  Made by Samerton
- *  https://github.com/NamelessMC/Nameless/tree/v2/
- *  NamelessMC version 2.1.2
- *
- *  License: MIT
- *  Special thanks to Vertisan 
- *
- */
-/*
- *    Made by cxDEV | BijjuXD
- *    https://github.com/bijju089/aurora-theme/
  *    Aurora Template
+ *    github.com/bijju089/aurora-theme
+ *    LICENSE: MIT
  */
 
 
@@ -24,8 +15,8 @@ require_once(ROOT_PATH . '/core/templates/backend_init.php');
 
 $smarty->assign(AuroraUtil::getSettingsToSmarty());
 $smarty->assign([
-        'TPL_PATH' => ROOT_PATH . '/custom/templates/Aurora/template_settings/page/',
-        'SETTINGS_TEMPLATE' => ROOT_PATH . '/custom/templates/Aurora/template_settings/' . $template_file,
+        'TPL_PATH' => ROOT_PATH . '/custom/templates/Aurora/_settings/page/',
+        'SETTINGS_TEMPLATE' => ROOT_PATH . '/custom/templates/Aurora/_settings/' . $template_file,
         'SUBMIT' => $language->get('general', 'submit'),
         'YES' => $language->get('general', 'yes'),
         'NO' => $language->get('general', 'no'),

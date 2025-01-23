@@ -1,13 +1,8 @@
 <?php
 /*
- *    NamelessMC | Aurora Theme
- *    https://github.com/NamelessMC/Nameless/
- *    NamelessMC version 2.1.2
- */
-/*
- *    Made by BijjuXD
- *    https://github.com/bijju089/aurora-theme/
- *    Aurora Template
+ *    Aurora Template for NamelessMC
+ *    github.com/bijju089/aurora-theme/
+ *    LICENSE: MIT
  */
 
 class Aurora_Template extends TemplateBase {
@@ -29,15 +24,15 @@ class Aurora_Template extends TemplateBase {
         $template = [
             'name' => 'Aurora',
             'version' => '2.0',
-            'nl_version' => '2.1.2',
-            'author' => '<a href="https://bijjuxd.me/" target="_blank">BijjuXD</a> | <a href="https://cxstudios.in/" target="_blank">cxSTUDIOS</a>',
+            'nl_version' => '2.1.3',
+            'author' => '<a href="https://cxstudios.in/" target="_blank">cxSTUDIOS</a> & <a href="https://github.com/bijju089/aurora-theme/graphs/contributors" target="_blank">Contributors</a>',
         ];
 
         $template['path'] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/' . $template['name'] . '/';
 
         parent::__construct($template['name'], $template['version'], $template['nl_version'], $template['author']);
 
-        $this->_settings = ROOT_PATH . '/custom/templates/Aurora/template_settings/settings.php';
+        $this->_settings = ROOT_PATH . '/custom/templates/Aurora/_settings/settings.php';
        
         $this->_smarty = $smarty;
         $this->_cache = $cache;
@@ -60,7 +55,7 @@ class Aurora_Template extends TemplateBase {
         $this->_language = $language;
         $this->_user = $user;
         $this->_pages = $pages;
-        require_once('template_settings/class/AuroraUtil.php');
+        require_once('_settings/class/AuroraUtil.php');
         AuroraUtil::initialise();
 
 // Assign Language
@@ -92,8 +87,8 @@ class Aurora_Template extends TemplateBase {
         define('PAGE_LOAD_TIME', $this->_language->get('general', 'page_loaded_in', ['time' => round($page_load, 3)]));
 
         $this->addCSSFiles([
-            $this->_template['path'] . 'css/fomantic.css?v=211' => [],
-            $this->_template['path'] . 'css/aurora.css?v=211' => []
+            $this->_template['path'] . '_assets/css/extra.css?v=0' => [],
+            $this->_template['path'] . '_assets/css/aurora.css?v=0' => []
         ]);
 
         $route = (isset($_GET['route']) ? rtrim($_GET['route'], '/') : '/');
@@ -149,16 +144,16 @@ class Aurora_Template extends TemplateBase {
         $this->addJSScript($JSVars);
 
         $this->addJSFiles([
-            $this->_template['path'] . 'js/core/core.js?v=203' => [],
-            $this->_template['path'] . 'js/core/user.js' => [],
-            $this->_template['path'] . 'js/core/pages.js?v=203' => [],
+            $this->_template['path'] . '_assets/js/core/core.js?v=0' => [],
+            $this->_template['path'] . '_assets/js/core/user.js?v=0' => [],
+            $this->_template['path'] . '_assets/js/core/pages.js?v=0' => [],
 
         ]);
 
         foreach ($this->_pages->getAjaxScripts() as $script) {
             $this->addJSScript('$.getJSON(\'' . $script . '\', function(data) {});');
         }
-        require_once('template_settings/frontend.php');
+        require_once('_settings/frontend.php');
     }
 }
 

@@ -1,12 +1,8 @@
 <?php
-
-/*
- * Contains misc utility methods.
- * Special thanks to Vertisan
- */
 /*
  * Aurora Template
- * Made by cxSTUDIOS | BijjuXD
+ * github.com/bijju089/aurora-theme
+ * LICENSE: MIT
  */
 
 class AuroraUtil
@@ -45,7 +41,7 @@ class AuroraUtil
 
     public static function getSettingsToSmarty(): array
     {
-        $settings_data = DB::getInstance()->get('aurora_settings', ['id', '<>', 0])->results();
+        $settings_data = DB::getInstance()->get('aurora', ['id', '<>', 0])->results();
         $result = [];
         if (count($settings_data)) {
             foreach ($settings_data as $value) {
@@ -61,14 +57,14 @@ class AuroraUtil
 
     public static function updateOrCreateParam($key, $value)
     {
-        $array = DB::getInstance()->get('aurora_settings', ['name', '=', $key])->results();
+        $array = DB::getInstance()->get('aurora', ['name', '=', $key])->results();
         $data = end($array);
         if (!empty($data)) {
-            DB::getInstance()->update('aurora_settings', $data->id, [
+            DB::getInstance()->update('aurora', $data->id, [
                 'value' => $value
             ]);
         } else {
-            DB::getInstance()->insert('aurora_settings', [
+            DB::getInstance()->insert('aurora', [
                 'name' => $key,
                 'value' => $value
             ]);
@@ -76,7 +72,7 @@ class AuroraUtil
     }
     public static function initialise()
     {   
-     if (DB::getInstance()->showTables('aurora_settings')) {
+     if (DB::getInstance()->showTables('aurora')) {
          return;
      }
      try {
@@ -90,7 +86,7 @@ class AuroraUtil
             // Error
         }
         try {
-            DB::getInstance()->createTable("aurora_settings", "`id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(255) NOT NULL, `value` varchar(5000) NOT NULL, PRIMARY KEY (`id`)");
+            DB::getInstance()->createTable("aurora", "`id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(255) NOT NULL, `value` varchar(5000) NOT NULL, PRIMARY KEY (`id`)");
         } catch (Exception $e) {
             // Error
         }
@@ -165,7 +161,7 @@ class AuroraUtil
 
         foreach ($settings_data as $key => $value) {
             try {
-                DB::getInstance()->insert('aurora_settings', [
+                DB::getInstance()->insert('aurora', [
                     'name' => $key,
                     'value' => $value,
                 ]);
