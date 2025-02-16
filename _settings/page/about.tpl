@@ -42,7 +42,7 @@
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                     <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">LICENSE</div>
-                    <div class="h5 mb-0 font-weight-bold text-reset text-gray-800">GPL-3</div>
+                    <div class="h5 mb-0 font-weight-bold text-reset text-gray-800">MIT</div>
                 </div>
                 <div class="col-auto">
                     <i class="fa-solid fa-scale-balanced fa-2x text-gray-300"></i>
