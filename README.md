@@ -54,7 +54,7 @@ A perfect theme for [NamelessMC](https://namelessmc.com/) <br><br>
 - English UK (100%)
 ### What you'll need
 
-- [NamelessMC](https://namelessmc.com/download/) v2.1.2
+- [NamelessMC](https://namelessmc.com/download/) v2.1.3
   - We always recommend you to use latest version of namelessmc.
 - Latest version of browser (Internet Explorer not supported)
 
